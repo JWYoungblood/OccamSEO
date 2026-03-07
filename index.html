@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Meta ── -->
+  <title>Occam SEO — The Simplest Path to #1</title>
+  <meta name="description" content="Occam SEO is a results-driven SEO consultancy built on one principle: the simplest strategy wins. We cut through complexity to deliver rankings that matter." />
+  <meta name="keywords" content="SEO consulting, search engine optimization, SEO agency, organic growth, technical SEO, content strategy" />
+  <meta name="author" content="Occam SEO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.occamseo.com/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.occamseo.com/" />
+  <meta property="og:title" content="Occam SEO — The Simplest Path to #1" />
+  <meta property="og:description" content="We cut through SEO complexity. The simplest strategy wins." />
+  <meta property="og:image" content="https://www.occamseo.com/og-image.jpg" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Occam SEO — The Simplest Path to #1" />
+  <meta name="twitter:description" content="We cut through SEO complexity. The simplest strategy wins." />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Occam SEO",
+    "description": "SEO consulting built on Occam's Razor: the simplest strategy wins.",
+    "url": "https://www.occamseo.com",
+    "serviceType": "Search Engine Optimization",
+    "areaServed": "Worldwide",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────
+       RESET & VARIABLES
+    ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #06101e;
+      --bg2:       #0b1929;
+      --bg3:       #102236;
+      --ink:       #ffffff;
+      --ink2:      #b8c8d8;
+      --ink3:      #5a7a96;
+      --gold:      #d4a843;
+      --gold2:     #f0c96a;
+      --silver:    #c0cdd8;
+      --blue:      #2a6fbd;
+      --blue2:     #3d8ee0;
+      --razor:     #c0cdd8;
+
+      --font-serif:  'Cormorant Garamond', Georgia, serif;
+      --font-mono:   'DM Mono', monospace;
+      --font-sans:   'Barlow', sans-serif;
+
+      --max-w: 1160px;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─────────────────────────────────────────
+       PAGE SYSTEM
+    ───────────────────────────────────────── */
+    .page { display: none; min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* ─────────────────────────────────────────
+       GRAIN OVERLAY
+    ───────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ─────────────────────────────────────────
+       NAVIGATION
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+      cursor: pointer; text-decoration: none;
+    }
+
+    /* SVG Razor Logo */
+    .logo-mark {
+      width: 38px; height: 38px;
+      flex-shrink: 0;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    /* ─────────────────────────────────────────
+       SHARED UTILS
+    ───────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      line-height: 1.15;
+    }
+
+    .section { padding: 120px 0; }
+
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ink3) 30%, var(--gold) 50%, var(--ink3) 70%, transparent);
+      margin: 0;
+    }
+
+    /* ─────────────────────────────────────────
+       ░░  HOME PAGE  ░░
+    ───────────────────────────────────────── */
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(42,111,189,0.12) 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    /* Diagonal razor line */
+    .hero-razor-line {
+      position: absolute;
+      top: 0; right: 15%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(42,111,189,0.2) 30%, rgba(212,168,67,0.35) 60%, transparent);
+      transform: rotate(-8deg) scaleY(1.4);
+      transform-origin: top center;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 7vw, 7rem);
+      margin-bottom: 28px;
+      color: var(--ink);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: var(--ink2);
+      max-width: 520px;
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    .hero-razor-principle {
+      display: inline-block;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink3);
+      border-left: 2px solid var(--gold);
+      padding-left: 18px;
+      margin-bottom: 52px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 16px 40px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--ink2);
+      padding: 16px 40px;
+      text-decoration: none;
+      border: 1px solid var(--ink3);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      margin-left: 16px;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--ink2);
+      color: var(--ink);
+    }
+
+    .hero-scroll {
+      margin-top: 80px;
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .hero-scroll-line {
+      width: 48px; height: 1px;
+      background: var(--ink3);
+      animation: scrollpulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollpulse {
+      0%, 100% { transform: scaleX(1); opacity: 0.4; }
+      50% { transform: scaleX(1.3); opacity: 1; }
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.15);
+      border-bottom: 1px solid rgba(212,168,67,0.15);
+      padding: 48px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 24px 20px;
+      border-right: 1px solid var(--bg3);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+
+    .service-card {
+      background: var(--bg2);
+      padding: 44px 36px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue2), var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      background: var(--bg3);
+      border-bottom-color: var(--gold);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-number {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--ink2);
+      line-height: 1.8;
+    }
+
+    /* Philosophy section */
+    .philosophy {
+      background: var(--bg2);
+      padding: 120px 0;
+    }
+
+    .philosophy-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .philosophy-text h2 {
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      margin-bottom: 28px;
+    }
+
+    .philosophy-text p {
+      color: var(--ink2);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .razor-diagram {
+      position: relative;
+      height: 340px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .razor-visual {
+      width: 100%; max-width: 340px;
+    }
+
+    /* Testimonial */
+    .testimonial-section {
+      padding: 100px 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .testimonial-card {
+      background: var(--bg2);
+      padding: 36px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .testimonial-card p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .testimonial-author {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--bg2), var(--bg3));
+      border-top: 1px solid rgba(212,168,67,0.15);
+      border-bottom: 1px solid rgba(212,168,67,0.15);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 20px;
+    }
+
+    .cta-banner p {
+      color: var(--ink2);
+      margin-bottom: 44px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─────────────────────────────────────────
+       ░░  ABOUT PAGE  ░░
+    ───────────────────────────────────────── */
+    .about-hero {
+      padding-top: calc(var(--nav-h) + 100px);
+      padding-bottom: 80px;
+      background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    .about-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .about-hero p {
+      color: var(--ink2);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .about-principle-box {
+      background: var(--bg3);
+      border: 1px solid rgba(212,168,67,0.2);
+      padding: 40px;
+    }
+
+    .about-principle-box .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.6;
+      color: var(--gold);
+      opacity: 0.3;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .about-principle-box blockquote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--ink);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .about-principle-box cite {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 60px;
+    }
+
+    .value-card {
+      background: var(--bg2);
+      padding: 48px;
+    }
+
+    .value-card h3 {
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .value-card p {
+      color: var(--ink2);
+      line-height: 1.8;
+    }
+
+    .value-icon {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-avatar {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--blue);
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--gold);
+    }
+
+    .team-card h4 {
+      font-size: 1.2rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .team-card p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    /* ─────────────────────────────────────────
+       ░░  BLOG PAGE  ░░
+    ───────────────────────────────────────── */
+    .blog-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 80px;
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      margin-bottom: 20px;
+    }
+
+    .blog-hero p {
+      color: var(--ink2);
+      max-width: 500px;
+    }
+
+    .blog-featured {
+      background: var(--bg2);
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      margin-bottom: 2px;
+    }
+
+    .blog-featured-img {
+      background: linear-gradient(135deg, var(--bg3), #0d2a45);
+      min-height: 380px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-featured-content {
+      padding: 52px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blog-tag {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .blog-featured-content h2 {
+      font-size: 1.9rem;
+      color: var(--ink);
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .blog-featured-content h2:hover { color: var(--gold); }
+
+    .blog-featured-content p {
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-size: 0.92rem;
+    }
+
+    .blog-date {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 2px;
+    }
+
+    .blog-card {
+      background: var(--bg2);
+      padding: 36px 32px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .blog-card:hover { background: var(--bg3); }
+
+    .blog-card h3 {
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.35;
+      transition: color 0.2s;
+    }
+
+    .blog-card:hover h3 { color: var(--gold); }
+
+    .blog-card p {
+      font-size: 0.85rem;
+      color: var(--ink2);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .blog-read-more {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .blog-read-more::after {
+      content: '→';
+      transition: transform 0.2s;
+    }
+
+    .blog-card:hover .blog-read-more::after {
+      transform: translateX(4px);
+    }
+
+    /* ─────────────────────────────────────────
+       ░░  QUOTE PAGE  ░░
+    ───────────────────────────────────────── */
+    .quote-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 60px;
+    }
+
+    .quote-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      margin-bottom: 20px;
+    }
+
+    .quote-hero p {
+      color: var(--ink2);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 64px;
+      padding-bottom: 120px;
+      align-items: start;
+    }
+
+    /* Form */
+    .quote-form {
+      background: var(--bg2);
+      padding: 52px;
+      border-top: 2px solid var(--gold);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--ink3);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 300;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-group select option {
+      background: var(--bg3);
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .checkbox-item {
+      display: flex; align-items: center; gap: 10px;
+      cursor: pointer;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 16px; height: 16px;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .checkbox-item span {
+      font-size: 0.85rem;
+      color: var(--ink2);
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 18px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover { background: var(--gold2); }
+
+    /* Sidebar */
+    .quote-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 32px);
+    }
+
+    .sidebar-block {
+      background: var(--bg2);
+      padding: 36px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-block h3 {
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .process-steps {
+      list-style: none;
+    }
+
+    .process-step {
+      display: flex; gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      background: rgba(200,169,110,0.1);
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 0.82rem;
+      color: var(--ink2);
+      line-height: 1.6;
+    }
+
+    .guarantee-box {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    .guarantee-box p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    /* Success message */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 52px;
+      background: var(--bg2);
+      border-top: 2px solid var(--gold);
+    }
+
+    .success-msg.show { display: block; }
+
+    .success-msg h3 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .success-msg p {
+      color: var(--ink2);
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.1);
+      padding: 64px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .footer-slogan {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--ink3);
+    }
+
+    /* ─────────────────────────────────────────
+       ANIMATIONS
+    ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .page.active .hero-content > * {
+      animation: fadeUp 0.7s ease both;
+    }
+    .page.active .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+    .page.active .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+    .page.active .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+    .page.active .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+    .page.active .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--bg3); }
+      .services-grid { grid-template-columns: 1fr; }
+      .philosophy-layout { grid-template-columns: 1fr; }
+      .razor-diagram { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .about-hero-inner { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .quote-layout { grid-template-columns: 1fr; }
+      .quote-sidebar { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a class="nav-logo" onclick="showPage('home')">
+    <!-- Razor Blade at 45° intersecting rising bars -->
+    <svg class="logo-mark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;">
+
+      <!-- ═══ THREE RISING BARS ═══ -->
+      <!-- Baseline -->
+      <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <!-- Bar 1 — short, steel blue -->
+      <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <!-- Bar 2 — medium, blue -->
+      <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <!-- Bar 3 — tall, gold -->
+      <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+
+      <!-- ═══ CLASSIC RAZOR BLADE at ~45° (top-right to bottom-left, edge facing down-right) ═══ -->
+      <!-- The blade is rotated 45°, centred around (26,26) -->
+      <!-- Blade body: long rectangle, rotated. Using transform on a group. -->
+      <g transform="rotate(-45, 26, 26)">
+        <!-- Main blade rectangle -->
+        <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <!-- Thick spine (top edge of blade) -->
+        <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
+        <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <!-- Sharp cutting edge — gold line at bottom -->
+        <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <!-- Bevel line -->
+        <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <!-- Center slot hole (classic safety blade detail) -->
+        <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
+        <!-- Corner notch lines (classic blade detail) -->
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Occam <span>SEO</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('blog')" id="nav-blog">Blog</a></li>
+    <li><a onclick="showPage('quote')" id="nav-quote">Get a Quote</a></li>
+  </ul>
+
+  <a class="nav-cta" onclick="showPage('quote')">Get a Quote</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════ -->
+<div id="page-home" class="page active" itemscope itemtype="https://schema.org/WebPage">
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg"></div>
+    <div class="hero-razor-line"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">SEO Consulting</div>
+      <h1>Cut to the <em>top.</em><br>Nothing more.</h1>
+      <p class="hero-razor-principle">
+        "Entities should not be multiplied beyond necessity." — William of Ockham
+      </p>
+      <p class="hero-sub">
+        We apply Occam's Razor to search. Strip away the noise, focus on what moves the needle, and rank.
+      </p>
+      <div>
+        <a class="btn-primary" onclick="showPage('quote')">Get a Free Quote</a>
+        <a class="btn-ghost" onclick="showPage('about')">Our Philosophy</a>
+      </div>
+      <div class="hero-scroll">
+        <span class="hero-scroll-line"></span>
+        Scroll to explore
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-bar" aria-label="Key statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">94%</span>
+          <span class="stat-label">Clients reach page one</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3.2×</span>
+          <span class="stat-label">Average traffic increase</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">180+</span>
+          <span class="stat-label">Clients served</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">11yr</span>
+          <span class="stat-label">In the SEO trenches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Services -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="eyebrow">What We Do</div>
+      <h2 id="services-heading" style="font-size: clamp(2rem,4vw,3.5rem);">Simple solutions.<br>Measurable results.</h2>
+      <div class="services-grid">
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">01</div>
+          <h3 itemprop="name">Technical SEO</h3>
+          <p itemprop="description">We audit your site's foundations — crawlability, Core Web Vitals, structured data, indexation — and fix what's holding you back. No jargon, just fixes that work.</p>
+        </article>
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">02</div>
+          <h3 itemprop="name">Content Strategy</h3>
+          <p itemprop="description">Using our razor-sharp keyword research process, we identify the fewest pages needed to dominate your niche. Quality over quantity, always.</p>
+        </article>
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">03</div>
+          <h3 itemprop="name">Link Building</h3>
+          <p itemprop="description">We pursue only the links that genuinely move rankings. No PBNs, no spam — just earned authority from sources that actually matter.</p>
+        </article>
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">04</div>
+          <h3 itemprop="name">Local SEO</h3>
+          <p itemprop="description">Dominate the local map pack and local organic results in your market with a streamlined, no-fluff local SEO system built for your city.</p>
+        </article>
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">05</div>
+          <h3 itemprop="name">SEO Audits</h3>
+          <p itemprop="description">A single comprehensive audit that cuts to the 20% of issues causing 80% of your ranking problems. Delivered in clear, actionable language.</p>
+        </article>
+        <article class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div class="service-number">06</div>
+          <h3 itemprop="name">Website Design</h3>
+          <p itemprop="description">We design and build clean, fast, conversion-focused websites that are architected for search from the ground up — beautiful to users, irresistible to Google.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="philosophy" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <div class="philosophy-layout">
+        <div class="philosophy-text">
+          <div class="eyebrow">The Occam Philosophy</div>
+          <h2 id="philosophy-heading">The simplest<br>explanation<br><em>is usually right.</em></h2>
+          <p>Most SEO agencies thrive on complexity. More deliverables, more reports, more meetings — all signals of value, but not value itself.</p>
+          <p>We believe the opposite. Occam's Razor says: when two solutions explain the same problem, the simpler one wins. We apply that principle relentlessly to SEO strategy.</p>
+          <p>Fewer, higher-quality pages beat a thousand thin ones. A handful of powerful links outperform hundreds of weak ones. A clear site architecture beats complex taxonomy every time.</p>
+          <a class="btn-ghost" onclick="showPage('about')">Read our full philosophy →</a>
+        </div>
+        <div class="razor-diagram" aria-hidden="true">
+          <!-- Animated razor SVG -->
+          <svg class="razor-visual" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .r-spin { animation: rspin 20s linear infinite; transform-origin: 150px 150px; }
+              @keyframes rspin { to { transform: rotate(360deg); } }
+            </style>
+            <circle cx="150" cy="150" r="130" stroke="rgba(42,111,189,0.12)" stroke-width="1"/>
+            <circle cx="150" cy="150" r="110" stroke="rgba(212,168,67,0.08)" stroke-width="1"/>
+            <g class="r-spin">
+              <line x1="150" y1="20"  x2="150" y2="36"  stroke="rgba(212,168,67,0.4)" stroke-width="1"/>
+              <line x1="150" y1="264" x2="150" y2="280" stroke="rgba(212,168,67,0.4)" stroke-width="1"/>
+              <line x1="20"  y1="150" x2="36"  y2="150" stroke="rgba(212,168,67,0.4)" stroke-width="1"/>
+              <line x1="264" y1="150" x2="280" y2="150" stroke="rgba(212,168,67,0.4)" stroke-width="1"/>
+            </g>
+            <!-- Baseline -->
+            <line x1="70" y1="230" x2="230" y2="230" stroke="#c0cdd8" stroke-width="1" opacity="0.3"/>
+            <!-- Bar 1 -->
+            <rect x="78"  y="190" width="32" height="40" rx="2" fill="#3d5a72" opacity="0.9"/>
+            <!-- Bar 2 -->
+            <rect x="124" y="160" width="32" height="70" rx="2" fill="#2a6fbd" opacity="0.9"/>
+            <!-- Bar 3 -->
+            <rect x="170" y="120" width="32" height="110" rx="2" fill="#d4a843" opacity="0.9"/>
+            <!-- Razor blade at 45° intersecting bars -->
+            <g transform="rotate(-45, 150, 150)">
+              <rect x="50" y="130" width="200" height="40" rx="4" fill="rgba(10,20,35,0.85)" stroke="#c0cdd8" stroke-width="1.3"/>
+              <rect x="50" y="130" width="200" height="12" rx="4" fill="#c0cdd8" opacity="0.18"/>
+              <line x1="50" y1="142" x2="250" y2="142" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+              <line x1="50" y1="170" x2="250" y2="170" stroke="#d4a843" stroke-width="2.5"/>
+              <line x1="50" y1="164" x2="250" y2="164" stroke="#c0cdd8" stroke-width="0.6" opacity="0.2" stroke-dasharray="5 5"/>
+              <rect x="130" y="143" width="40" height="18" rx="2" fill="none" stroke="#c0cdd8" stroke-width="1" opacity="0.5"/>
+              <line x1="50"  y1="130" x2="62"  y2="142" stroke="#c0cdd8" stroke-width="0.9" opacity="0.35"/>
+              <line x1="250" y1="130" x2="238" y2="142" stroke="#c0cdd8" stroke-width="0.9" opacity="0.35"/>
+            </g>
+            <text x="150" y="272" text-anchor="middle" fill="rgba(212,168,67,0.35)" font-family="'DM Mono', monospace" font-size="9" letter-spacing="4">OCCAM'S RAZOR</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonial-section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="eyebrow">Client Results</div>
+      <h2 id="testimonials-heading" style="font-size: clamp(1.8rem,3vw,3rem);">What simplicity<br>delivers.</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+          <p itemprop="reviewBody">"Occam cut our SEO strategy in half — and our organic traffic tripled in six months. I wish I'd found them years ago."</p>
+          <footer class="testimonial-author" itemprop="author">Sarah K. — Founder, Meridian Health</footer>
+        </blockquote>
+        <blockquote class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+          <p itemprop="reviewBody">"Every other agency gave us a 60-page strategy deck. Occam gave us a one-page plan. That one-pager got us to position #1 in four months."</p>
+          <footer class="testimonial-author" itemprop="author">James T. — CMO, Stackflow SaaS</footer>
+        </blockquote>
+        <blockquote class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+          <p itemprop="reviewBody">"Razor-sharp is the right word. No bloat, no fluff. Just a clear signal of what needed to be done, and then they did it."</p>
+          <footer class="testimonial-author" itemprop="author">Priya M. — Head of Growth, Vela Retail</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="eyebrow" style="justify-content:center;">Start Today</div>
+      <h2 id="cta-heading">Ready to cut through<br>the <em>noise?</em></h2>
+      <p>Tell us about your site and goals. We'll come back with a clear, honest plan — no upsells, no nonsense.</p>
+      <a class="btn-primary" onclick="showPage('quote')">Get Your Free Quote</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span>
+          <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('blog')">Blog</a></li>
+            <li><a onclick="showPage('quote')">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a>Technical SEO</a></li>
+            <li><a>Content Strategy</a></li>
+            <li><a>Link Building</a></li>
+            <li><a>Local SEO</a></li>
+            <li><a>SEO Audits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a><span class="__cf_email__" data-cfemail="a9c1ccc5c5c6e9c6cacac8c4daccc687cac6c4">[email&#160;protected]</span></a></li>
+            <li><a>LinkedIn</a></li>
+            <li><a>Twitter / X</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Occam SEO. All rights reserved.</p>
+        <span class="footer-slogan">"Cut what doesn't rank."</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT PAGE
+════════════════════════════════════════ -->
+<div id="page-about" class="page" itemscope itemtype="https://schema.org/AboutPage">
+
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-inner">
+        <div>
+          <div class="eyebrow">About Occam SEO</div>
+          <h1>We believe<br>simplicity <em>scales.</em></h1>
+          <p>Founded on a single philosophical principle, Occam SEO exists to prove that the most effective SEO strategy is almost always the simplest one.</p>
+        </div>
+        <div class="about-principle-box">
+          <span class="quote-mark">"</span>
+          <blockquote>
+            Plurality should not be posited without necessity.
+          </blockquote>
+          <cite>— William of Ockham, 14th Century Philosopher</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Story -->
+  <section class="section" aria-labelledby="story-heading">
+    <div class="container" style="max-width:760px">
+      <div class="eyebrow">Our Story</div>
+      <h2 id="story-heading" style="font-size: clamp(2rem,4vw,3.2rem); margin-bottom:36px;">Built out of frustration<br>with complexity.</h2>
+      <p style="color:var(--ink2);line-height:1.9;margin-bottom:20px;font-size:1.02rem;">
+        Our founder spent a decade inside large SEO agencies watching the same cycle repeat: bloated strategies, monthly retainers that justified themselves through volume rather than value, and clients left more confused about their search performance than before they hired help.
+      </p>
+      <p style="color:var(--ink2);line-height:1.9;margin-bottom:20px;font-size:1.02rem;">
+        The insight was simple: Google's algorithm, at its core, rewards relevance and authority. Everything else is noise. So we asked: what does the minimum viable SEO strategy look like? What's the fewest number of actions that produce the maximum search result?
+      </p>
+      <p style="color:var(--ink2);line-height:1.9;font-size:1.02rem;">
+        Occam SEO is the answer to that question. We named ourselves after William of Ockham — the 14th century friar whose logical razor cuts away unnecessary assumptions — because that's exactly what we do to SEO strategy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section style="padding-bottom:120px;" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="eyebrow">Core Values</div>
+      <h2 id="values-heading" style="font-size: clamp(1.8rem,3vw,3rem); margin-bottom:0;">How we think,<br>every day.</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon">[ 01 ]</span>
+          <h3>Parsimony</h3>
+          <p>Never recommend more than necessary. If a client can achieve their ranking goal with one page and three links, that's exactly what we prescribe.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">[ 02 ]</span>
+          <h3>Transparency</h3>
+          <p>You always know exactly what we're doing and why. Our reports are written for humans, not to fill a slide deck.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">[ 03 ]</span>
+          <h3>Measurability</h3>
+          <p>Every recommendation ties back to a specific, trackable outcome. If we can't measure it, we don't do it.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">[ 04 ]</span>
+          <h3>Longevity</h3>
+          <p>We build SEO that compounds over years, not tactics that spike and vanish. The simplest strategies are also the most durable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section style="background:var(--bg2);padding:100px 0;" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="eyebrow">The Team</div>
+      <h2 id="team-heading" style="font-size: clamp(1.8rem,3vw,3rem); margin-bottom:0;">Small by design.</h2>
+      <div class="team-grid">
+        <div class="team-card" itemscope itemtype="https://schema.org/Person">
+          <div class="team-avatar">M</div>
+          <h4 itemprop="name">Marcus Webb</h4>
+          <div class="team-role" itemprop="jobTitle">Founder & Head of Strategy</div>
+          <p>10+ years in SEO, former Director at two global agencies. Built Occam to do what he always believed SEO should be.</p>
+        </div>
+        <div class="team-card" itemscope itemtype="https://schema.org/Person">
+          <div class="team-avatar">L</div>
+          <h4 itemprop="name">Lena Fischer</h4>
+          <div class="team-role" itemprop="jobTitle">Technical SEO Lead</div>
+          <p>Specialist in Core Web Vitals, site architecture, and log file analysis. She finds the technical root cause on the first look.</p>
+        </div>
+        <div class="team-card" itemscope itemtype="https://schema.org/Person">
+          <div class="team-avatar">D</div>
+          <h4 itemprop="name">Devraj Patel</h4>
+          <div class="team-role" itemprop="jobTitle">Content & Link Strategist</div>
+          <p>Former journalist turned SEO strategist. Devraj writes and earns links that last — because the story is always good enough.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span>
+          <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('blog')">Blog</a></li>
+            <li><a onclick="showPage('quote')">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a>Technical SEO</a></li>
+            <li><a>Content Strategy</a></li>
+            <li><a>Link Building</a></li>
+            <li><a>Local SEO</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a><span class="__cf_email__" data-cfemail="2048454c4c4f604f4343414d53454f0e434f4d">[email&#160;protected]</span></a></li>
+            <li><a>LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Occam SEO. All rights reserved.</p>
+        <span class="footer-slogan">"Cut what doesn't rank."</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     BLOG PAGE
+════════════════════════════════════════ -->
+<div id="page-blog" class="page" itemscope itemtype="https://schema.org/Blog">
+
+  <section class="blog-hero">
+    <div class="container">
+      <div class="eyebrow">The Occam Journal</div>
+      <h1>Sharp thinking<br>about <em>search.</em></h1>
+      <p>No filler, no trend-chasing. Just clear, proven ideas about how search actually works.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Featured post -->
+  <div class="container" style="padding-top:60px;padding-bottom:4px;">
+    <article class="blog-featured" itemscope itemtype="https://schema.org/BlogPosting">
+      <div class="blog-featured-img" aria-hidden="true">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="40,170 100,30 190,30 130,170" fill="none" stroke="rgba(192,205,216,0.2)" stroke-width="1"/>
+          <line x1="40" y1="170" x2="190" y2="30" stroke="rgba(212,168,67,0.3)" stroke-width="1.2"/>
+          <rect x="70" y="130" width="12" height="28" fill="#5a7a96" opacity="0.6"/>
+          <rect x="88" y="110" width="12" height="48" fill="#2a6fbd" opacity="0.7"/>
+          <rect x="106" y="86" width="12" height="72" fill="#d4a843" opacity="0.8"/>
+          <text x="100" y="192" text-anchor="middle" fill="rgba(212,168,67,0.2)" font-size="8" letter-spacing="5" font-family="monospace">FEATURED</text>
+        </svg>
+      </div>
+      <div class="blog-featured-content">
+        <div class="blog-tag">Featured · Technical SEO</div>
+        <h2 itemprop="headline">Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead)</h2>
+        <p itemprop="description">Most technical SEO audits surface 200+ issues and solve none of them. Here's the Occam method for identifying the three fixes that actually move rankings.</p>
+        <div style="display:flex;align-items:center;gap:24px;">
+          <a class="btn-primary" style="font-size:0.68rem;padding:12px 28px;">Read Article</a>
+          <span class="blog-date" itemprop="datePublished" content="2025-01-15">Jan 15, 2025</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Blog grid -->
+  <div class="container" style="padding-bottom:120px;">
+    <div class="blog-grid">
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Content Strategy</div>
+        <h3 itemprop="headline">The One-Page Content Strategy That Ranked a SaaS Site in 90 Days</h3>
+        <p itemprop="description">Forget content calendars and pillar pages. Here's how a single, well-structured content plan produced top-3 rankings across 14 commercial keywords.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-02-03">Feb 3, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Link Building</div>
+        <h3 itemprop="headline">How Many Links Do You Actually Need? A Razor-Sharp Answer</h3>
+        <p itemprop="description">Link quantity is a red herring. We analyzed 400 ranking changes to find the minimum effective link threshold for competitive niches.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-02-18">Feb 18, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Local SEO</div>
+        <h3 itemprop="headline">Local SEO in 2025: The 5 Signals That Actually Matter</h3>
+        <p itemprop="description">Local search has changed. We cut through the noise to identify the five ranking factors that consistently separate page-one local results from page-two obscurity.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-03-01">Mar 1, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Philosophy</div>
+        <h3 itemprop="headline">Why We Named the Company After a Medieval Monk</h3>
+        <p itemprop="description">Occam's Razor isn't just a clever name. It's the operating principle behind every strategy we write. Here's what that actually means in practice.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-03-10">Mar 10, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Core Web Vitals</div>
+        <h3 itemprop="headline">Core Web Vitals: Fix These Two Things and Stop Worrying</h3>
+        <p itemprop="description">LCP and CLS cause 80% of Core Web Vitals failures. Here's the fastest path to a passing score — without rebuilding your site.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-03-22">Mar 22, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-tag">Strategy</div>
+        <h3 itemprop="headline">The Case Against Monthly SEO Retainers</h3>
+        <p itemprop="description">Most SEO retainers are structured to maximize agency revenue, not client results. We make the case for project-based work — and when retainers actually make sense.</p>
+        <span class="blog-date" itemprop="datePublished" content="2025-04-05">Apr 5, 2025</span><br><br>
+        <div class="blog-read-more">Read Article</div>
+      </article>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span>
+          <p>The simplest path to page one.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('blog')">Blog</a></li>
+            <li><a onclick="showPage('quote')">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="93fbf6fffffcd3fcf0f0f2fee0f6fcbdf0fcfe">[email&#160;protected]</span></a></li></ul></div>
+        <div class="footer-col"></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Occam SEO. All rights reserved.</p>
+        <span class="footer-slogan">"Cut what doesn't rank."</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     QUOTE PAGE
+════════════════════════════════════════ -->
+<div id="page-quote" class="page" itemscope itemtype="https://schema.org/ContactPage">
+
+  <section class="quote-hero">
+    <div class="container">
+      <div class="eyebrow">Get a Quote</div>
+      <h1>Let's cut to<br>the <em>answer.</em></h1>
+      <p>Tell us about your site and your goals. We'll respond within one business day with an honest, straight-talking proposal — no obligation, no pitch deck.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="quote-layout">
+
+      <!-- Form -->
+      <div>
+        <div class="quote-form" id="quote-form-wrap">
+          <div class="eyebrow" style="margin-bottom:32px;">Your Details</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="Jane" autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" autocomplete="family-name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company / Website URL</label>
+            <input type="url" id="company" name="website" placeholder="https://yoursite.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Monthly Budget</label>
+            <select id="budget" name="budget">
+              <option value="" disabled selected>Select a range</option>
+              <option>Under $1,000 / month</option>
+              <option>$1,000 – $3,000 / month</option>
+              <option>$3,000 – $7,500 / month</option>
+              <option>$7,500 – $15,000 / month</option>
+              <option>$15,000+ / month</option>
+              <option>One-time project</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Services Needed</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="service" value="technical"> <span>Technical SEO</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="service" value="content"> <span>Content Strategy</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="service" value="links"> <span>Link Building</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="service" value="local"> <span>Local SEO</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="service" value="audit"> <span>SEO Audit</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="service" value="webdesign"> <span>Website Design</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Primary Goal</label>
+            <textarea id="goal" name="goal" placeholder="Briefly describe your current SEO situation and what success looks like for you..."></textarea>
+          </div>
+
+          <button class="form-submit" onclick="handleSubmit(event)">Send My Request →</button>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin-bottom:20px;">
+            <circle cx="24" cy="24" r="22" stroke="#d4a843" stroke-width="1.5"/>
+            <polyline points="14,24 21,31 34,17" stroke="#d4a843" stroke-width="2" fill="none"/>
+          </svg>
+          <h3>Message received.</h3>
+          <p>We'll review your details and respond within one business day with a straightforward proposal.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="quote-sidebar">
+        <div class="sidebar-block">
+          <h3>Our process</h3>
+          <ul class="process-steps">
+            <li class="process-step">
+              <span class="step-num">01</span>
+              <div class="step-content">
+                <h4>Discovery Call</h4>
+                <p>30-minute call to understand your goals, competitive landscape, and current search performance.</p>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="step-num">02</span>
+              <div class="step-content">
+                <h4>Razor Audit</h4>
+                <p>We identify the fewest, highest-leverage actions that will move the needle for your site specifically.</p>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="step-num">03</span>
+              <div class="step-content">
+                <h4>Clear Proposal</h4>
+                <p>One-page proposal. No upsells baked in. Scope, timeline, and price — in plain English.</p>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="step-num">04</span>
+              <div class="step-content">
+                <h4>Execution</h4>
+                <p>We get to work. Monthly reporting with exactly the metrics that matter, nothing more.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-block">
+          <div class="guarantee-box">
+            <div class="eyebrow" style="margin-bottom:16px;">Our Guarantee</div>
+            <p>If we don't believe we can deliver measurable improvement for your site, we'll tell you — and point you to someone who can. We'd rather lose a client than overpromise.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span>
+          <p>The simplest path to page one.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('blog')">Blog</a></li>
+            <li><a onclick="showPage('quote')">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a><span class="__cf_email__" data-cfemail="6e060b0202012e010d0d0f031d0b01400d0103">[email&#160;protected]</span></a></li></ul></div>
+        <div class="footer-col"></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Occam SEO. All rights reserved.</p>
+        <span class="footer-slogan">"Cut what doesn't rank."</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── Page routing ──
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.
