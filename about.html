@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Meta ── -->
+  <title>About — Occam SEO</title>
+  <meta name="description" content="Learn about Occam SEO — who we are, what we believe, and why we built an SEO consultancy around the principle of simplicity." />
+  <meta name="keywords" content="about Occam SEO, SEO consulting team, SEO philosophy, who we are" />
+  <meta name="author" content="Occam SEO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.occam-seo.com/about.html" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.occam-seo.com/about.html" />
+  <meta property="og:title" content="About — Occam SEO" />
+  <meta property="og:description" content="Who we are and why simplicity is the sharpest SEO strategy." />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Occam SEO",
+    "url": "https://www.occam-seo.com/about.html",
+    "description": "About Occam SEO — built on the principle that the simplest SEO strategy wins.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Occam SEO",
+      "url": "https://www.occam-seo.com"
+    }
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────
+       RESET & VARIABLES
+    ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #06101e;
+      --bg2:       #0b1929;
+      --bg3:       #102236;
+      --ink:       #ffffff;
+      --ink2:      #b8c8d8;
+      --ink3:      #5a7a96;
+      --gold:      #d4a843;
+      --gold2:     #f0c96a;
+      --silver:    #c0cdd8;
+      --blue:      #2a6fbd;
+      --blue2:     #3d8ee0;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-mono:  'DM Mono', monospace;
+      --font-sans:  'Barlow', sans-serif;
+
+      --max-w: 1160px;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ─────────────────────────────────────────
+       NAVIGATION
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark span { color: var(--gold); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    /* ─────────────────────────────────────────
+       SHARED UTILITIES
+    ───────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      line-height: 1.15;
+    }
+
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ink3) 30%, var(--gold) 50%, var(--ink3) 70%, transparent);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 16px 40px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--ink2);
+      padding: 16px 40px;
+      text-decoration: none;
+      border: 1px solid var(--ink3);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ─────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────── */
+    .about-hero {
+      padding-top: calc(var(--nav-h) + 100px);
+      padding-bottom: 90px;
+      background:
+        radial-gradient(ellipse 70% 50% at 80% 40%, rgba(42,111,189,0.1) 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Diagonal accent line */
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 18%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(212,168,67,0.15) 40%, rgba(212,168,67,0.3) 65%, transparent);
+      transform: rotate(-6deg) scaleY(1.3);
+      transform-origin: top center;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .about-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--ink2);
+      line-height: 1.85;
+      animation: fadeUp 0.7s ease 0.25s both;
+    }
+
+    /* Ockham quote box */
+    .quote-box {
+      background: var(--bg3);
+      border: 1px solid rgba(212,168,67,0.2);
+      border-left: 3px solid var(--gold);
+      padding: 40px;
+      animation: fadeUp 0.7s ease 0.35s both;
+    }
+
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.5;
+      color: var(--gold);
+      opacity: 0.25;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .quote-box blockquote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--ink);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .quote-box cite {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─────────────────────────────────────────
+       OUR STORY SECTION
+    ───────────────────────────────────────── */
+    .story-section {
+      padding: 110px 0;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 40px);
+    }
+
+    .story-sidebar h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .story-sidebar h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .sidebar-rule {
+      width: 48px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--blue));
+      margin-bottom: 24px;
+    }
+
+    .story-sidebar p {
+      font-size: 0.88rem;
+      color: var(--ink3);
+      font-family: var(--font-mono);
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+
+    /* ── PARAGRAPH BLOCKS ──
+       These are the sections you fill in with your own writing.
+       Each block has a label comment so you know exactly where to type.
+    ───────────────────────────────────────── */
+    .story-body {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .story-block {
+      border-left: 1px solid var(--bg3);
+      padding-left: 36px;
+    }
+
+    .story-block-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .story-block-label::after {
+      content: '';
+      display: block;
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--bg3), transparent);
+    }
+
+    .story-block h3 {
+      font-size: 1.6rem;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .story-block p {
+      color: var(--ink2);
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .story-block p:last-child { margin-bottom: 0; }
+
+    /* Placeholder styling — remove the class once you've written your content */
+    .placeholder {
+      background: rgba(42,111,189,0.06);
+      border: 1px dashed rgba(42,111,189,0.25);
+      border-radius: 2px;
+      padding: 24px 28px;
+      color: var(--ink3) !important;
+      font-style: italic;
+      font-size: 0.9rem !important;
+      line-height: 1.7 !important;
+    }
+
+    /* ─────────────────────────────────────────
+       VALUES SECTION
+    ───────────────────────────────────────── */
+    .values-section {
+      background: var(--bg2);
+      padding: 110px 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 60px;
+    }
+
+    .value-card {
+      background: var(--bg3);
+      padding: 48px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .value-card:hover { border-bottom-color: var(--gold); }
+
+    .value-icon {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .value-card h3 {
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .value-card p {
+      color: var(--ink2);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    /* ─────────────────────────────────────────
+       TEAM SECTION
+    ───────────────────────────────────────── */
+    .team-section {
+      padding: 110px 0;
+    }
+
+    .team-intro {
+      max-width: 600px;
+      margin-bottom: 64px;
+    }
+
+    .team-intro p {
+      color: var(--ink2);
+      font-size: 1.02rem;
+      line-height: 1.85;
+      margin-top: 20px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .team-card {
+      background: var(--bg2);
+      padding: 40px 32px;
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .team-card:hover { border-top-color: var(--gold); }
+
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--blue);
+      margin-bottom: 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--gold);
+    }
+
+    .team-card h4 {
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .team-role {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .team-card p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    /* ─────────────────────────────────────────
+       PERSONAL BIO SECTION
+       (A dedicated area for you to introduce yourself)
+    ───────────────────────────────────────── */
+    .founder-section {
+      background: var(--bg2);
+      padding: 110px 0;
+    }
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .founder-identity {
+      position: sticky;
+      top: calc(var(--nav-h) + 40px);
+      text-align: center;
+    }
+
+    .founder-avatar-lg {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 2px solid var(--gold);
+      margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      color: var(--gold);
+    }
+
+    .founder-name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .founder-title {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .founder-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .founder-link {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .founder-link:hover { color: var(--gold); }
+
+    .founder-bio {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .bio-block h3 {
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .bio-block p {
+      color: var(--ink2);
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 14px;
+    }
+
+    .bio-block p:last-child { margin-bottom: 0; }
+
+    /* ─────────────────────────────────────────
+       CTA BANNER
+    ───────────────────────────────────────── */
+    .cta-banner {
+      padding: 100px 0;
+      text-align: center;
+      background: linear-gradient(135deg, var(--bg2), var(--bg3));
+      border-top: 1px solid rgba(212,168,67,0.15);
+      border-bottom: 1px solid rgba(212,168,67,0.15);
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 20px;
+    }
+
+    .cta-banner h2 em { font-style: italic; color: var(--gold); }
+
+    .cta-banner p {
+      color: var(--ink2);
+      margin-bottom: 44px;
+      max-width: 480px;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.1);
+      padding: 64px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col li { margin-bottom: 10px; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .footer-slogan {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--ink3);
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .story-layout { grid-template-columns: 1fr; }
+      .story-sidebar { position: static; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .founder-layout { grid-template-columns: 1fr; }
+      .founder-identity { position: static; text-align: left; }
+      .founder-avatar-lg { margin: 0 0 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <!-- Razor Blade at 45° intersecting rising bars -->
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;flex-shrink:0;">
+      <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+      <g transform="rotate(-45, 26, 26)">
+        <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
+        <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Occam <span>SEO</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <a class="nav-cta" href="quote.html">Get a Quote</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="about-hero" itemscope itemtype="https://schema.org/AboutPage">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div>
+        <div class="eyebrow">About Occam SEO</div>
+        <h1>Built to cut.<br>Built to <em>last.</em></h1>
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  YOUR INTRO PARAGRAPH                   ║
+             ║  Write 2–3 sentences introducing your   ║
+             ║  company at a high level. What is Occam ║
+             ║  SEO and what makes it different?        ║
+             ╚══════════════════════════════════════════╝ -->
+        <p class="hero-lead placeholder">
+          [ Write your company introduction here — 2 to 3 sentences about what Occam SEO is, who it serves, and what makes it different from other SEO agencies. ]
+        </p>
+      </div>
+
+      <div class="quote-box">
+        <span class="quote-mark">"</span>
+        <blockquote>
+          Plurality should not be posited without necessity.
+        </blockquote>
+        <cite>— William of Ockham, 14th Century Philosopher &amp; Logician</cite>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     OUR STORY
+════════════════════════════════════════ -->
+<section class="story-section" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="story-layout">
+
+      <!-- Sticky sidebar label -->
+      <div class="story-sidebar">
+        <div class="eyebrow">Our Story</div>
+        <h2 id="story-heading">Why we<br>built <em>this.</em></h2>
+        <div class="sidebar-rule"></div>
+        <p>The story behind Occam SEO — in your own words.</p>
+      </div>
+
+      <!-- Story body — fill in each block below -->
+      <div class="story-body">
+
+        <!-- BLOCK 1 -->
+        <div class="story-block">
+          <div class="story-block-label">The Beginning</div>
+          <h3>Where it started</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR PARAGRAPH — THE BEGINNING         ║
+               ║  How did Occam SEO get started? What    ║
+               ║  problem were you trying to solve? What  ║
+               ║  frustrated you about the SEO industry?  ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Write about how and why you started Occam SEO. What was the moment or frustration that sparked the idea? What did you see in the SEO industry that you knew you could do better? ]
+          </p>
+        </div>
+
+        <!-- BLOCK 2 -->
+        <div class="story-block">
+          <div class="story-block-label">The Philosophy</div>
+          <h3>Why Occam's Razor?</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR PARAGRAPH — THE PHILOSOPHY        ║
+               ║  Explain the Occam's Razor connection.  ║
+               ║  Why does simplicity matter in SEO?     ║
+               ║  What does it mean in practice for you? ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Write about why you chose Occam's Razor as your guiding principle. How does "the simplest explanation is usually right" translate into your SEO work? Give a real example if you can. ]
+          </p>
+        </div>
+
+        <!-- BLOCK 3 -->
+        <div class="story-block">
+          <div class="story-block-label">Today</div>
+          <h3>Where we are now</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR PARAGRAPH — WHERE YOU ARE NOW     ║
+               ║  What does Occam SEO look like today?   ║
+               ║  Who do you work with? What have you    ║
+               ║  achieved? Where are you headed?        ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Write about where Occam SEO stands today. What kinds of clients do you work with? What results are you most proud of? What's your vision for the future of the company? ]
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     FOUNDER / PERSONAL BIO
+════════════════════════════════════════ -->
+<section class="founder-section" aria-labelledby="founder-heading">
+  <div class="container">
+    <div class="founder-layout">
+
+      <!-- Identity panel -->
+      <div class="founder-identity">
+        <!-- ╔══════════════════════════════════════════╗
+             ║  YOUR AVATAR INITIAL                    ║
+             ║  Change the letter below to your own    ║
+             ║  first initial, e.g. "J" for John       ║
+             ╚══════════════════════════════════════════╝ -->
+        <div class="founder-avatar-lg">[ X ]</div>
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  YOUR NAME & TITLE                      ║
+             ╚══════════════════════════════════════════╝ -->
+        <div class="founder-name">[ Your Full Name ]</div>
+        <span class="founder-title">[ Your Title, e.g. Founder & Lead Strategist ]</span>
+
+        <div class="founder-links">
+          <!-- ╔════════════════════════════════════════╗
+               ║  YOUR LINKS                           ║
+               ║  Replace # with your real URLs        ║
+               ╚════════════════════════════════════════╝ -->
+          <a href="#" class="founder-link">LinkedIn →</a>
+          <a href="#" class="founder-link">Twitter / X →</a>
+          <a href="mailto:hello@occam-seo.com" class="founder-link">hello@occam-seo.com</a>
+        </div>
+      </div>
+
+      <!-- Bio content -->
+      <div class="founder-bio">
+        <div class="eyebrow">Meet the Founder</div>
+        <h2 id="founder-heading" style="font-size: clamp(2rem,3.5vw,3rem); margin-bottom:0;">The person<br>behind the <em>razor.</em></h2>
+
+        <!-- BIO BLOCK 1 -->
+        <div class="bio-block">
+          <h3>Background</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR BIO — BACKGROUND                  ║
+               ║  Where did you come from professionally? ║
+               ║  What's your background in SEO or        ║
+               ║  marketing? How many years of experience? ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Write about your professional background. Where did you work before starting Occam SEO? What experience do you bring? How long have you been in SEO or digital marketing? ]
+          </p>
+        </div>
+
+        <!-- BIO BLOCK 2 -->
+        <div class="bio-block">
+          <h3>Why I do this</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR BIO — MOTIVATION                  ║
+               ║  What drives you? What do you care about ║
+               ║  deeply when it comes to helping clients? ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Write about what motivates you personally. Why do you care about SEO? What does it mean to you to help a client rank? What kind of impact do you want Occam SEO to have? ]
+          </p>
+        </div>
+
+        <!-- BIO BLOCK 3 — Optional personal touch -->
+        <div class="bio-block">
+          <h3>Outside the work</h3>
+
+          <!-- ╔══════════════════════════════════════════╗
+               ║  YOUR BIO — PERSONAL (OPTIONAL)         ║
+               ║  A short human touch — hobbies, where   ║
+               ║  you're based, what you care about       ║
+               ║  outside of work. Makes you relatable.   ║
+               ║  Delete this block if you prefer to      ║
+               ║  keep it purely professional.            ║
+               ╚══════════════════════════════════════════╝ -->
+          <p class="placeholder">
+            [ Optional: Add a personal note. Where are you based? What do you do outside of work? This helps potential clients feel like they're hiring a real person, not a faceless agency. Delete this block if you'd prefer not to include it. ]
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     CORE VALUES
+════════════════════════════════════════ -->
+<section class="values-section" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="eyebrow">Core Values</div>
+    <h2 id="values-heading" style="font-size: clamp(1.8rem,3vw,3rem);">How we think,<br>every day.</h2>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  VALUES — OPTIONAL CUSTOMIZATION        ║
+         ║  The four values below are pre-written  ║
+         ║  but feel free to swap in your own.     ║
+         ║  Edit the <h3> and <p> tags to change.  ║
+         ╚══════════════════════════════════════════╝ -->
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">[ 01 ]</span>
+        <h3>Parsimony</h3>
+        <p>Never recommend more than necessary. If a client can achieve their ranking goal with one page and three links, that's exactly what we prescribe.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">[ 02 ]</span>
+        <h3>Transparency</h3>
+        <p>You always know exactly what we're doing and why. Our reports are written for humans, not to fill a slide deck.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">[ 03 ]</span>
+        <h3>Measurability</h3>
+        <p>Every recommendation ties back to a specific, trackable outcome. If we can't measure it, we don't do it.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">[ 04 ]</span>
+        <h3>Longevity</h3>
+        <p>We build SEO that compounds over years, not tactics that spike and vanish. The simplest strategies are also the most durable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     TEAM
+════════════════════════════════════════ -->
+<section class="team-section" aria-labelledby="team-heading">
+  <div class="container">
+    <div class="team-intro">
+      <div class="eyebrow">The Team</div>
+      <h2 id="team-heading" style="font-size: clamp(1.8rem,3vw,3rem);">Small by design.</h2>
+
+      <!-- ╔══════════════════════════════════════════╗
+           ║  TEAM INTRO PARAGRAPH                   ║
+           ║  A short note about your team size and  ║
+           ║  philosophy around keeping it lean.     ║
+           ╚══════════════════════════════════════════╝ -->
+      <p class="placeholder">
+        [ Write 1–2 sentences about your team. Are you a solo consultant? Do you have a small trusted team? Why do you prefer to stay lean? ]
+      </p>
+    </div>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  TEAM CARDS                             ║
+         ║  Fill in each card with real names,     ║
+         ║  titles, and bios. Add or remove cards  ║
+         ║  by copying or deleting the             ║
+         ║  <div class="team-card"> blocks.        ║
+         ╚══════════════════════════════════════════╝ -->
+    <div class="team-grid">
+
+      <!-- Team Member 1 -->
+      <div class="team-card" itemscope itemtype="https://schema.org/Person">
+        <div class="team-avatar">[ X ]</div>  <!-- Change X to first initial -->
+        <h4 itemprop="name">[ Full Name ]</h4>
+        <span class="team-role" itemprop="jobTitle">[ Job Title ]</span>
+        <p itemprop="description" class="placeholder">[ Write a 2–3 sentence bio for this team member. What do they specialize in? What's their background? ]</p>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card" itemscope itemtype="https://schema.org/Person">
+        <div class="team-avatar">[ X ]</div>
+        <h4 itemprop="name">[ Full Name ]</h4>
+        <span class="team-role" itemprop="jobTitle">[ Job Title ]</span>
+        <p itemprop="description" class="placeholder">[ Write a 2–3 sentence bio for this team member. What do they specialize in? What's their background? ]</p>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card" itemscope itemtype="https://schema.org/Person">
+        <div class="team-avatar">[ X ]</div>
+        <h4 itemprop="name">[ Full Name ]</h4>
+        <span class="team-role" itemprop="jobTitle">[ Job Title ]</span>
+        <p itemprop="description" class="placeholder">[ Write a 2–3 sentence bio for this team member. What do they specialize in? What's their background? ]</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════ -->
+<section class="cta-banner" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center;">Work With Us</div>
+    <h2 id="cta-heading">Ready to cut through<br>the <em>noise?</em></h2>
+    <p>Tell us about your site and goals. We'll come back with a clear, honest plan — no upsells, no nonsense.</p>
+    <a class="btn-primary" href="quote.html">Get Your Free Quote</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-wordmark">Occam <span>SEO</span></span>
+        <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html">Technical SEO</a></li>
+          <li><a href="index.html">Content Strategy</a></li>
+          <li><a href="index.html">Link Building</a></li>
+          <li><a href="index.html">Local SEO</a></li>
+          <li><a href="index.html">Website Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@occam-seo.com">hello@occam-seo.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Occam SEO. All rights reserved.</p>
+      <span class="footer-slogan">"Cut what doesn't rank."</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
