@@ -390,6 +390,15 @@
       border-color: var(--ink3);
     }
 
+    .checkbox-item:has(input:checked) {
+      border-color: var(--gold);
+      background: rgba(212,168,67,0.08);
+    }
+
+    .checkbox-item:has(input:checked) span {
+      color: var(--ink);
+    }
+
     .checkbox-item input[type="checkbox"] {
       width: 16px; height: 16px;
       accent-color: var(--gold);
