@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Meta ── -->
+  <title>Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead) — The Occam Journal</title>
+  <meta name="description" content="Most technical SEO audits surface 200+ issues and solve none of them. Here's the Occam method for identifying the three fixes that actually move your rankings." />
+  <meta name="keywords" content="SEO audit, technical SEO audit, SEO audit overcomplicated, how to do an SEO audit, SEO audit tips, Occam SEO" />
+  <meta name="author" content="Occam SEO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.occam-seo.com/blog-seo-audits.html" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.occam-seo.com/blog-seo-audits.html" />
+  <meta property="og:title" content="Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead)" />
+  <meta property="og:description" content="Most SEO audits surface 200+ issues and solve none of them. Here's the Occam method for finding the fixes that actually move rankings." />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead)" />
+  <meta name="twitter:description" content="Most SEO audits surface 200+ issues and solve none of them. Here's the Occam method." />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead)",
+    "description": "Most technical SEO audits surface 200+ issues and solve none of them. Here's the Occam method for identifying the three fixes that actually move your rankings.",
+    "author": {
+      "@type": "Organization",
+      "name": "Occam SEO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Occam SEO",
+      "url": "https://www.occam-seo.com"
+    },
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-01-15",
+    "url": "https://www.occam-seo.com/blog-seo-audits.html",
+    "articleSection": "Technical SEO",
+    "keywords": ["SEO audit", "technical SEO", "SEO strategy", "overcomplicated SEO"]
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #06101e;
+      --bg2:       #0b1929;
+      --bg3:       #102236;
+      --ink:       #ffffff;
+      --ink2:      #b8c8d8;
+      --ink3:      #5a7a96;
+      --gold:      #d4a843;
+      --gold2:     #f0c96a;
+      --silver:    #c0cdd8;
+      --blue:      #2a6fbd;
+      --blue2:     #3d8ee0;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-mono:  'DM Mono', monospace;
+      --font-sans:  'Barlow', sans-serif;
+
+      --max-w:     1160px;
+      --article-w: 720px;
+      --nav-h:     72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark span { color: var(--gold); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+    /* ── UTILITIES ── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ink3) 30%, var(--gold) 50%, var(--ink3) 70%, transparent);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding-top: calc(var(--nav-h) + 90px);
+      padding-bottom: 70px;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(42,111,189,0.09) 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 20%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(212,168,67,0.12) 40%, rgba(212,168,67,0.25) 65%, transparent);
+      transform: rotate(-5deg) scaleY(1.3);
+      transform-origin: top center;
+    }
+
+    .article-hero-inner { max-width: var(--article-w); }
+
+    .article-breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      margin-bottom: 28px;
+      display: flex; align-items: center; gap: 10px;
+      animation: fadeUp 0.5s ease 0.05s both;
+    }
+
+    .article-breadcrumb a {
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .article-breadcrumb a:hover { color: var(--gold); }
+    .article-breadcrumb span { opacity: 0.4; }
+
+    .article-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 4px 12px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease 0.1s both;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease 0.15s both;
+    }
+
+    .article-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .article-lede {
+      font-size: 1.15rem;
+      color: var(--ink2);
+      line-height: 1.85;
+      max-width: 620px;
+      margin-bottom: 36px;
+      animation: fadeUp 0.5s ease 0.2s both;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.5s ease 0.25s both;
+    }
+
+    .article-meta-item {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .article-meta-dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 72px;
+      padding: 72px 0 120px;
+      align-items: start;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: var(--ink2);
+    }
+
+    .article-body h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      color: var(--ink);
+      margin: 60px 0 20px;
+      line-height: 1.2;
+    }
+
+    .article-body h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .article-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--ink);
+      margin: 40px 0 16px;
+    }
+
+    .article-body p { margin-bottom: 24px; }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    .article-body strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .article-body em {
+      font-style: italic;
+      color: var(--silver);
+    }
+
+    .article-body a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,168,67,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--gold);
+    }
+
+    /* Numbered list */
+    .article-body ol {
+      list-style: none;
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .article-body ol li {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .list-num {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--gold);
+      background: rgba(212,168,67,0.1);
+      border: 1px solid rgba(212,168,67,0.2);
+      min-width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .list-content { flex: 1; }
+
+    .list-content strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .list-content span {
+      font-size: 0.92rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 28px;
+      margin: 44px 0;
+    }
+
+    .pull-quote p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 12px !important;
+    }
+
+    .pull-quote cite {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    /* Callout box */
+    .callout {
+      background: var(--bg3);
+      border-top: 2px solid var(--gold);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+
+    .callout-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .callout p {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-bottom: 0 !important;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 40px 0;
+      font-size: 0.9rem;
+    }
+
+    .compare-table thead tr {
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .compare-table th {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .compare-table td {
+      padding: 14px 16px;
+      color: var(--ink2);
+      border-bottom: 1px solid var(--bg3);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    .compare-table .col-bad { color: var(--ink3); }
+    .compare-table .col-good { color: var(--ink); }
+
+    .compare-table .badge-bad {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      background: var(--bg3);
+      padding: 3px 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .compare-table .badge-good {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 3px 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    /* Section rule */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0 40px;
+    }
+
+    .section-rule::before {
+      content: '';
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--bg3));
+    }
+
+    .section-rule::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--bg3), transparent);
+    }
+
+    .section-rule span {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      white-space: nowrap;
+    }
+
+    /* Step blocks */
+    .step-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 36px 0;
+    }
+
+    .step-block {
+      background: var(--bg2);
+      border-left: 3px solid var(--blue);
+      padding: 24px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .step-block:nth-child(2) { border-left-color: var(--gold); }
+    .step-block:nth-child(3) { border-left-color: var(--blue2); }
+
+    .step-block-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--gold);
+      background: rgba(212,168,67,0.1);
+      border: 1px solid rgba(212,168,67,0.2);
+      min-width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-block-content h4 {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .step-block-content p {
+      font-size: 0.9rem;
+      color: var(--ink2);
+      line-height: 1.7;
+      margin-bottom: 0 !important;
+    }
+
+    /* Article end CTA */
+    .article-end-cta {
+      background: var(--bg2);
+      border-top: 2px solid var(--gold);
+      padding: 40px;
+      margin-top: 64px;
+      text-align: center;
+    }
+
+    .article-end-cta h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .article-end-cta h3 em { font-style: italic; color: var(--gold); }
+
+    .article-end-cta p {
+      color: var(--ink2);
+      font-size: 0.95rem;
+      margin-bottom: 28px !important;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 14px 36px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    /* ── SIDEBAR ── */
+    .article-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-block {
+      background: var(--bg2);
+      padding: 28px;
+    }
+
+    .sidebar-block h4 {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toc-list a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--ink3);
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      transition: color 0.2s;
+      line-height: 1.45;
+    }
+
+    .toc-list a:hover { color: var(--gold); }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .related-post {
+      display: block;
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--bg3);
+      transition: background 0.2s;
+    }
+
+    .related-post:last-child { border-bottom: none; }
+
+    .related-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .related-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--ink2);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .related-post:hover .related-title { color: var(--gold); }
+
+    .share-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .share-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      background: var(--bg3);
+      border: 1px solid transparent;
+      padding: 10px 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .share-btn:hover {
+      border-color: var(--ink3);
+      color: var(--ink2);
+    }
+
+    /* ── RELATED SECTION ── */
+    .related-section {
+      background: var(--bg2);
+      padding: 90px 0;
+      border-top: 1px solid rgba(212,168,67,0.12);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .related-card {
+      background: var(--bg3);
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+      display: block;
+    }
+
+    .related-card:hover {
+      border-bottom-color: var(--gold);
+      background: #132840;
+    }
+
+    .related-card .blog-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .related-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .related-card:hover h3 { color: var(--gold); }
+
+    .related-card p {
+      font-size: 0.85rem;
+      color: var(--ink3);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .read-more-arrow {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.1);
+      padding: 64px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .footer-slogan {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--ink3);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .compare-table { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;flex-shrink:0;">
+      <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+      <g transform="rotate(-45, 26, 26)">
+        <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
+        <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Occam <span>SEO</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <a class="nav-cta" href="quote.html">Get a Quote</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     ARTICLE HERO
+════════════════════════════════════════ -->
+<header class="article-hero" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="container">
+    <div class="article-hero-inner">
+
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="blog.html">The Occam Journal</a>
+        <span>/</span>
+        Technical SEO
+      </nav>
+
+      <span class="article-tag">Technical SEO</span>
+
+      <h1 itemprop="headline">Why 90% of SEO Audits Are<br><em>Overcomplicated</em><br>(And What to Do Instead)</h1>
+
+      <p class="article-lede" itemprop="description">
+        Most technical SEO audits hand you a 200-row spreadsheet of issues and leave you no clearer on what to actually fix. Here's why that happens — and the Occam method for identifying the three changes that will genuinely move your rankings.
+      </p>
+
+      <div class="article-meta">
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span itemprop="author">Occam SEO</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <time itemprop="datePublished" datetime="2025-01-15">January 15, 2025</time>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span>7 min read</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span>Technical SEO</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     ARTICLE + SIDEBAR
+════════════════════════════════════════ -->
+<div class="container">
+  <div class="article-layout">
+
+    <!-- ── ARTICLE BODY ── -->
+    <article class="article-body" itemprop="articleBody">
+
+      <p>
+        Here's a scenario you may recognize. You hire an SEO agency or buy a tool subscription, run a full audit of your site, and receive a report listing 247 issues. Broken internal links. Missing alt text. Pages with thin content. Duplicate meta descriptions. A slow server response time on twelve specific URLs. Hreflang tags that could be improved. Six redirects that aren't quite optimal.
+      </p>
+
+      <p>
+        You stare at the list. You don't know where to start. So you start at the top — fixing missing alt text on images that Google has never cared about — and three months later your rankings haven't moved an inch.
+      </p>
+
+      <p>
+        This is the SEO audit trap. And it catches almost everyone.
+      </p>
+
+      <div class="section-rule"><span>The Problem</span></div>
+
+      <h2>Why Audits Get So <em>Bloated</em></h2>
+
+      <p>
+        The audit complexity problem comes from two sources, and understanding both is the first step to fixing it.
+      </p>
+
+      <p>
+        <strong>The first source is tooling.</strong> Modern SEO crawlers — Screaming Frog, Ahrefs, SEMrush, Sitebulb — are extraordinary pieces of software. They can identify hundreds of technical signals across thousands of pages in minutes. But they are designed to surface everything potentially relevant, not to tell you what actually matters. A flag is a flag, whether it affects your rankings by 0.001% or 20%. The tool doesn't know the difference. It just reports.
+      </p>
+
+      <p>
+        <strong>The second source is incentive structure.</strong> An agency that delivers a 12-page audit looks more thorough than one that delivers a single page. A consultant who finds 200 issues looks like they've done more work than one who finds three. The SEO industry has financially rewarded comprehensiveness over precision for decades. The result is audits that are impressive documents and useless action plans.
+      </p>
+
+      <div class="pull-quote">
+        <p>"A 200-item audit is not a strategy. It's a list of things that could theoretically be better, with no information about which ones are holding your rankings back."</p>
+      </div>
+
+      <p>
+        A 200-item audit is not a strategy. It's a list of things that could theoretically be better, with no information about which ones are holding your rankings back. And because most businesses have finite time and budget, optimizing for completeness rather than impact is not just unhelpful — it actively wastes resources that could have been spent on the moves that matter.
+      </p>
+
+      <div class="section-rule"><span>The Framework</span></div>
+
+      <h2>The Occam Audit: <em>Three Questions</em></h2>
+
+      <p>
+        Our approach to auditing strips the process back to three diagnostic questions, applied in order. Each question filters the issue list further. What you're left with at the end isn't comprehensive — it's targeted. It's the minimum set of changes with the maximum ranking impact.
+      </p>
+
+      <div class="step-blocks">
+        <div class="step-block">
+          <div class="step-block-num">01</div>
+          <div class="step-block-content">
+            <h4>Is Google able to find and understand this page?</h4>
+            <p>Before anything else, confirm the page is being crawled, indexed, and parsed correctly. Check for crawl blocks in robots.txt, noindex tags that shouldn't be there, canonicalization issues pointing equity elsewhere, and JavaScript rendering problems hiding content from the bot. If Google can't find or read the page, nothing else matters.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">02</div>
+          <div class="step-block-content">
+            <h4>Is this page the clearest possible answer to its target query?</h4>
+            <p>Once Google can access the page, the question becomes relevance. Is the page focused tightly on one topic, or is it trying to rank for six things at once? Is the title tag and H1 aligned precisely with the search intent? Does the content answer the query more thoroughly than the current page-one results? This question eliminates most "thin content" and keyword dilution problems in a single diagnostic step.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">03</div>
+          <div class="step-block-content">
+            <h4>Does this page have enough authority to compete?</h4>
+            <p>Finally, link authority. Compare the backlink profile of your target page against the pages currently ranking above it. If competitors have significantly stronger link equity, no amount of on-page optimization will close the gap — you need links. If you have comparable authority, the issue is likely questions one or two. This distinction alone saves enormous amounts of wasted effort.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Notice what's missing from that framework. There's no step for fixing image alt text across the site. There's no step for resolving duplicate meta descriptions on pages that don't rank for anything. There's no step for chasing a perfect PageSpeed score on pages that users never visit. Those things might be worth addressing eventually — but they are not audit priorities. They don't answer any of the three questions.
+      </p>
+
+      <div class="section-rule"><span>The Comparison</span></div>
+
+      <h2>Traditional Audit vs. <em>The Occam Audit</em></h2>
+
+      <p>
+        Here's what the difference looks like in practice, using a real-world site structure as an example. A 200-page B2C e-commerce site comes to us after a standard agency audit.
+      </p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Issue Type</th>
+            <th>Traditional Audit</th>
+            <th>Occam Audit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Missing alt text on 340 images</td>
+            <td><span class="badge-bad">Flagged — High Priority</span><br><span class="col-bad">Listed as critical fix</span></td>
+            <td><span class="badge-good">Deprioritized</span><br><span class="col-good">None of these images are on target pages. No ranking impact.</span></td>
+          </tr>
+          <tr>
+            <td>3 product pages blocked by robots.txt</td>
+            <td><span class="badge-bad">Flagged — Medium</span><br><span class="col-bad">Listed among 40+ crawl issues</span></td>
+            <td><span class="badge-good">Fix Immediately</span><br><span class="col-good">Two of these pages target high-value commercial keywords. Google can't see them.</span></td>
+          </tr>
+          <tr>
+            <td>Duplicate meta descriptions on 60 blog posts</td>
+            <td><span class="badge-bad">Flagged — Medium</span><br><span class="col-bad">Requires writer to update 60 pages</span></td>
+            <td><span class="badge-good">Ignore</span><br><span class="col-good">Meta descriptions are not a ranking factor. None of these posts are target pages.</span></td>
+          </tr>
+          <tr>
+            <td>Top 5 category pages competing with thin subcategory pages</td>
+            <td><span class="badge-bad">Not Flagged</span><br><span class="col-bad">Tool didn't surface this as an issue</span></td>
+            <td><span class="badge-good">Critical Fix</span><br><span class="col-good">Keyword cannibalization is suppressing the main category pages. Consolidate subcategories.</span></td>
+          </tr>
+          <tr>
+            <td>Page speed 3.2s on mobile (target: under 2.5s)</td>
+            <td><span class="badge-bad">Flagged — High Priority</span><br><span class="col-bad">Full technical sprint recommended</span></td>
+            <td><span class="badge-good">Monitor</span><br><span class="col-good">Competitors average 3.8s. Speed is not the gap here. Not a priority.</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The traditional audit generated weeks of work that would have produced almost no ranking movement. The Occam audit identified two fixes — unblocking three product pages and consolidating cannibalizing subcategories — that moved two of the five most important category pages from page two to page one within eight weeks.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">The Key Insight</span>
+        <p>The most impactful issues are often the ones that standard tools don't flag — because they require contextual judgment rather than pattern matching. A tool can tell you that a page is slow. It can't tell you that the page's biggest problem is that it's competing with five of its own subcategory pages for the same keyword.</p>
+      </div>
+
+      <div class="section-rule"><span>How to Do It</span></div>
+
+      <h2>Running the Occam Audit on <em>Your Own Site</em></h2>
+
+      <p>
+        You don't need to hire us to apply this thinking. Here's the practical process for doing it yourself.
+      </p>
+
+      <ol>
+        <li>
+          <span class="list-num">01</span>
+          <div class="list-content">
+            <strong>List your ten most important target pages</strong>
+            <span>These are the pages that, if they ranked higher, would most directly drive business value. Usually commercial landing pages, key product or service pages, or the two or three blog posts targeting your highest-value informational keywords.</span>
+          </div>
+        </li>
+        <li>
+          <span class="list-num">02</span>
+          <div class="list-content">
+            <strong>Run the three questions on each page only</strong>
+            <span>Don't crawl the whole site. Open each of your ten pages and ask: Can Google find it? Is it clearly about one thing? Does it have the authority to compete? Use Google Search Console to check indexation status, and use a tool like Ahrefs or Moz to compare your link equity against whoever is currently ranking above you.</span>
+          </div>
+        </li>
+        <li>
+          <span class="list-num">03</span>
+          <div class="list-content">
+            <strong>Rank issues by ranking impact, not issue count</strong>
+            <span>One crawl block on a high-value page outweighs 100 missing alt text issues on pages that don't matter. Sort your findings by: "If I fixed this tomorrow, how much would my rankings move?" Anything that doesn't answer that question clearly goes to the bottom of the list.</span>
+          </div>
+        </li>
+        <li>
+          <span class="list-num">04</span>
+          <div class="list-content">
+            <strong>Fix the top three things only — then measure</strong>
+            <span>This is where most people resist the approach. They want to fix everything. But fixing three things and measuring the results teaches you whether your diagnosis was correct. If rankings move, you've validated the approach. If they don't, you've learned something. An unfocused 50-item fix list teaches you nothing, because you can't isolate which change had which effect.</span>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-rule"><span>The Takeaway</span></div>
+
+      <h2>The Audit Is Not the Goal</h2>
+
+      <p>
+        It bears repeating, because it's easy to lose sight of: an SEO audit is not a deliverable. It is a diagnostic tool. The goal is not a comprehensive document. The goal is higher rankings — and the fastest path to higher rankings is identifying the fewest, most impactful changes and executing them well.
+      </p>
+
+      <p>
+        Every hour spent fixing a low-impact issue is an hour not spent fixing a high-impact one. The audit that serves you best is the one that ruthlessly filters for relevance and gives you a short list you can actually act on.
+      </p>
+
+      <p>
+        That's what Occam's Razor looks like applied to technical SEO. Cut everything that doesn't move the needle. What's left is your action plan.
+      </p>
+
+      <!-- End CTA -->
+      <div class="article-end-cta">
+        <h3>Want an <em>Occam Audit</em> on your site?</h3>
+        <p>We'll find the three things actually holding your rankings back — and only those three things.</p>
+        <a class="btn-primary" href="quote.html">Get a Free Quote →</a>
+      </div>
+
+    </article>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="article-sidebar" aria-label="Article sidebar">
+
+      <!-- Table of Contents -->
+      <div class="sidebar-block">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li>
+            <a href="#"><span class="toc-num">01</span>Why Audits Get So Bloated</a>
+          </li>
+          <li>
+            <a href="#"><span class="toc-num">02</span>The Occam Audit: Three Questions</a>
+          </li>
+          <li>
+            <a href="#"><span class="toc-num">03</span>Traditional vs. Occam Audit</a>
+          </li>
+          <li>
+            <a href="#"><span class="toc-num">04</span>Running It on Your Own Site</a>
+          </li>
+          <li>
+            <a href="#"><span class="toc-num">05</span>The Audit Is Not the Goal</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Share -->
+      <div class="sidebar-block">
+        <h4>Share This Article</h4>
+        <div class="share-row">
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            Share on X
+          </a>
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            Share on LinkedIn
+          </a>
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            Copy Link
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Posts -->
+      <div class="sidebar-block">
+        <h4>Related Articles</h4>
+        <a class="related-post" href="blog-medieval-monk.html">
+          <span class="related-tag">Philosophy</span>
+          <span class="related-title">Why We Named the Company After a Medieval Monk</span>
+        </a>
+        <a class="related-post" href="#">
+          <span class="related-tag">Technical SEO</span>
+          <span class="related-title">Core Web Vitals: Fix These Two Things and Stop Worrying</span>
+        </a>
+        <a class="related-post" href="#">
+          <span class="related-tag">Strategy</span>
+          <span class="related-title">How to Tell If Your SEO Agency Is Actually Working</span>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     RELATED ARTICLES
+════════════════════════════════════════ -->
+<section class="related-section">
+  <div class="container">
+    <div class="eyebrow">Keep Reading</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,3rem);">More from the<br><em>Occam Journal.</em></h2>
+
+    <div class="related-grid">
+
+      <a class="related-card" href="blog-medieval-monk.html">
+        <span class="blog-tag">Philosophy</span>
+        <h3>Why We Named the Company After a Medieval Monk</h3>
+        <p>Occam's Razor isn't just a clever name. It's the operating principle behind every strategy we write. Here's what that means in practice.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+
+      <a class="related-card" href="#">
+        <span class="blog-tag">Technical SEO</span>
+        <h3>Core Web Vitals: Fix These Two Things and Stop Worrying</h3>
+        <p>LCP and CLS cause 80% of Core Web Vitals failures. Here's the fastest path to a passing score — without rebuilding your site.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+
+      <a class="related-card" href="#">
+        <span class="blog-tag">Strategy</span>
+        <h3>The Case Against Monthly SEO Retainers</h3>
+        <p>Most retainers are structured to maximize agency revenue, not results. Here's when project-based work is smarter — and when it isn't.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-wordmark">Occam <span>SEO</span></span>
+        <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html">Technical SEO</a></li>
+          <li><a href="index.html">Content Strategy</a></li>
+          <li><a href="index.html">Link Building</a></li>
+          <li><a href="index.html">Local SEO</a></li>
+          <li><a href="index.html">Website Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@occam-seo.com">hello@occam-seo.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Occam SEO. All rights reserved.</p>
+      <span class="footer-slogan">"Cut what doesn't rank."</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
