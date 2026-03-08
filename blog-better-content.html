@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Meta ── -->
+  <title>Stop Writing More Content. Start Writing Better Content. — The Occam Journal</title>
+  <meta name="description" content="The publish-more-often advice is killing your SEO. Here's why one exceptional page beats ten mediocre ones — and exactly what 'exceptional' looks like in practice." />
+  <meta name="keywords" content="content strategy SEO, content quality vs quantity, better SEO content, content marketing SEO, Occam SEO" />
+  <meta name="author" content="Occam SEO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.occam-seo.com/blog-better-content.html" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.occam-seo.com/blog-better-content.html" />
+  <meta property="og:title" content="Stop Writing More Content. Start Writing Better Content." />
+  <meta property="og:description" content="The publish-more-often advice is killing your SEO. Here's why one exceptional page beats ten mediocre ones." />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stop Writing More Content. Start Writing Better Content." />
+  <meta name="twitter:description" content="The publish-more-often advice is killing your SEO. Here's why one exceptional page beats ten mediocre ones." />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Stop Writing More Content. Start Writing Better Content.",
+    "description": "The publish-more-often advice is killing your SEO. Here's why one exceptional page beats ten mediocre ones — and exactly what exceptional looks like in practice.",
+    "author": {
+      "@type": "Organization",
+      "name": "Occam SEO"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Occam SEO",
+      "url": "https://www.occam-seo.com"
+    },
+    "datePublished": "2025-05-08",
+    "dateModified": "2025-05-08",
+    "url": "https://www.occam-seo.com/blog-better-content.html",
+    "articleSection": "Content Strategy",
+    "keywords": ["content strategy", "SEO content", "content quality", "content marketing"]
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #06101e;
+      --bg2:       #0b1929;
+      --bg3:       #102236;
+      --ink:       #ffffff;
+      --ink2:      #b8c8d8;
+      --ink3:      #5a7a96;
+      --gold:      #d4a843;
+      --gold2:     #f0c96a;
+      --silver:    #c0cdd8;
+      --blue:      #2a6fbd;
+      --blue2:     #3d8ee0;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-mono:  'DM Mono', monospace;
+      --font-sans:  'Barlow', sans-serif;
+
+      --max-w:     1160px;
+      --article-w: 720px;
+      --nav-h:     72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark span { color: var(--gold); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+    /* ── UTILITIES ── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ink3) 30%, var(--gold) 50%, var(--ink3) 70%, transparent);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding-top: calc(var(--nav-h) + 90px);
+      padding-bottom: 70px;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(42,111,189,0.09) 0%, transparent 60%),
+        linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 20%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(212,168,67,0.12) 40%, rgba(212,168,67,0.25) 65%, transparent);
+      transform: rotate(-5deg) scaleY(1.3);
+      transform-origin: top center;
+    }
+
+    .article-hero-inner { max-width: var(--article-w); }
+
+    .article-breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      margin-bottom: 28px;
+      display: flex; align-items: center; gap: 10px;
+      animation: fadeUp 0.5s ease 0.05s both;
+    }
+
+    .article-breadcrumb a {
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .article-breadcrumb a:hover { color: var(--gold); }
+    .article-breadcrumb span { opacity: 0.4; }
+
+    .article-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 4px 12px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease 0.1s both;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease 0.15s both;
+    }
+
+    .article-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .article-lede {
+      font-size: 1.15rem;
+      color: var(--ink2);
+      line-height: 1.85;
+      max-width: 620px;
+      margin-bottom: 36px;
+      animation: fadeUp 0.5s ease 0.2s both;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.5s ease 0.25s both;
+    }
+
+    .article-meta-item {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .article-meta-dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 72px;
+      padding: 72px 0 120px;
+      align-items: start;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: var(--ink2);
+    }
+
+    .article-body h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      color: var(--ink);
+      margin: 60px 0 20px;
+      line-height: 1.2;
+    }
+
+    .article-body h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .article-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--ink);
+      margin: 40px 0 16px;
+    }
+
+    .article-body p { margin-bottom: 24px; }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    .article-body strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .article-body em {
+      font-style: italic;
+      color: var(--silver);
+    }
+
+    .article-body a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,168,67,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover { border-bottom-color: var(--gold); }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 28px;
+      margin: 44px 0;
+    }
+
+    .pull-quote p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 0 !important;
+    }
+
+    /* Callout box */
+    .callout {
+      background: var(--bg3);
+      border-top: 2px solid var(--gold);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+
+    .callout-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .callout p {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-bottom: 0 !important;
+    }
+
+    /* Section rule */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0 40px;
+    }
+
+    .section-rule::before {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--bg3));
+    }
+
+    .section-rule::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--bg3), transparent);
+    }
+
+    .section-rule span {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      white-space: nowrap;
+    }
+
+    /* Step blocks */
+    .step-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 36px 0;
+    }
+
+    .step-block {
+      background: var(--bg2);
+      border-left: 3px solid var(--blue);
+      padding: 24px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .step-block:nth-child(2) { border-left-color: var(--gold); }
+    .step-block:nth-child(3) { border-left-color: var(--blue2); }
+    .step-block:nth-child(4) { border-left-color: var(--silver); }
+    .step-block:nth-child(5) { border-left-color: var(--blue); }
+
+    .step-block-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--gold);
+      background: rgba(212,168,67,0.1);
+      border: 1px solid rgba(212,168,67,0.2);
+      min-width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-block-content h4 {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .step-block-content p {
+      font-size: 0.9rem;
+      color: var(--ink2);
+      line-height: 1.7;
+      margin-bottom: 0 !important;
+    }
+
+    /* Numbered list */
+    .article-body ol {
+      list-style: none;
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .article-body ol li {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .list-num {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--gold);
+      background: rgba(212,168,67,0.1);
+      border: 1px solid rgba(212,168,67,0.2);
+      min-width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .list-content { flex: 1; }
+
+    .list-content strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .list-content span {
+      font-size: 0.92rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    /* Article end CTA */
+    .article-end-cta {
+      background: var(--bg2);
+      border-top: 2px solid var(--gold);
+      padding: 40px;
+      margin-top: 64px;
+      text-align: center;
+    }
+
+    .article-end-cta h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .article-end-cta h3 em { font-style: italic; color: var(--gold); }
+
+    .article-end-cta p {
+      color: var(--ink2);
+      font-size: 0.95rem;
+      margin-bottom: 28px !important;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #000000;
+      padding: 14px 36px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    /* ── SIDEBAR ── */
+    .article-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-block {
+      background: var(--bg2);
+      padding: 28px;
+    }
+
+    .sidebar-block h4 {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toc-list a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--ink3);
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      transition: color 0.2s;
+      line-height: 1.45;
+    }
+
+    .toc-list a:hover { color: var(--gold); }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .related-post {
+      display: block;
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .related-post:last-child { border-bottom: none; }
+
+    .related-tag {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .related-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--ink2);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .related-post:hover .related-title { color: var(--gold); }
+
+    .share-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .share-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      background: var(--bg3);
+      border: 1px solid transparent;
+      padding: 10px 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .share-btn:hover {
+      border-color: var(--ink3);
+      color: var(--ink2);
+    }
+
+    /* ── RELATED SECTION ── */
+    .related-section {
+      background: var(--bg2);
+      padding: 90px 0;
+      border-top: 1px solid rgba(212,168,67,0.12);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .related-card {
+      background: var(--bg3);
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+      display: block;
+    }
+
+    .related-card:hover {
+      border-bottom-color: var(--gold);
+      background: #132840;
+    }
+
+    .related-card .blog-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .related-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .related-card:hover h3 { color: var(--gold); }
+
+    .related-card p {
+      font-size: 0.85rem;
+      color: var(--ink3);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .read-more-arrow {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.1);
+      padding: 64px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .footer-slogan {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--ink3);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;flex-shrink:0;">
+      <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+      <g transform="rotate(-45, 26, 26)">
+        <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
+        <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Occam <span>SEO</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <a class="nav-cta" href="quote.html">Get a Quote</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     ARTICLE HERO
+════════════════════════════════════════ -->
+<header class="article-hero" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="container">
+    <div class="article-hero-inner">
+
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="blog.html">The Occam Journal</a>
+        <span>/</span>
+        Content Strategy
+      </nav>
+
+      <span class="article-tag">Content Strategy</span>
+
+      <h1 itemprop="headline">Stop Writing More Content.<br><em>Start Writing Better Content.</em></h1>
+
+      <p class="article-lede" itemprop="description">
+        The publish-more-often advice is everywhere — and it's killing SEO strategies that could actually work. Here's why one exceptional page beats ten mediocre ones, and exactly what "exceptional" looks like when you sit down to write it.
+      </p>
+
+      <div class="article-meta">
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span itemprop="author">Occam SEO</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <time itemprop="datePublished" datetime="2025-05-08">May 8, 2025</time>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span>8 min read</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-dot"></span>
+          <span>Content Strategy</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     ARTICLE + SIDEBAR
+════════════════════════════════════════ -->
+<div class="container">
+  <div class="article-layout">
+
+    <!-- ── ARTICLE BODY ── -->
+    <article class="article-body" itemprop="articleBody">
+
+      <p>
+        At some point in the last decade, "publish more content" became the default SEO advice. Post twice a week. Keep the blog active. Feed the algorithm. The logic sounded reasonable — more pages means more keywords, more keywords means more traffic. Agencies built entire retainers around content volume. Editorial calendars became a deliverable in their own right.
+      </p>
+
+      <p>
+        The advice wasn't entirely wrong at the time. In Google's earlier years, volume did correlate loosely with rankings. But that era is over, and the strategies built on it are now actively working against the sites that follow them.
+      </p>
+
+      <p>
+        The businesses still following this playbook aren't just wasting money on content that doesn't rank. They're generating a slow accumulation of mediocre pages that dilute the authority of their good pages, cannibalize each other's keyword targets, and signal to Google that the site is not a particularly authoritative source on any given topic. The publish-more-often strategy doesn't just fail — it creates a hole you have to dig out of.
+      </p>
+
+      <div class="section-rule"><span>Why Volume Fails</span></div>
+
+      <h2>What Changed — and <em>Why It Matters Now</em></h2>
+
+      <p>
+        Google's core ranking systems have become significantly better at evaluating quality at the page level. The concept of <strong>E-E-A-T</strong> — Experience, Expertise, Authoritativeness, and Trustworthiness — isn't just a content checklist. It's a description of how Google tries to model whether a given piece of content comes from a source that actually knows what it's talking about.
+      </p>
+
+      <p>
+        A page that covers a topic superficially, adds no original insight, and largely rephrases what's already on page one doesn't demonstrate expertise. It demonstrates that someone with a content calendar needed to fill a slot. Google has gotten progressively better at telling the difference — and its Helpful Content updates have been explicit attempts to demote exactly this kind of output.
+      </p>
+
+      <div class="pull-quote">
+        <p>"Google isn't rewarding sites that publish often. It's rewarding sites that publish things worth reading — and the gap between those two groups is widening every year."</p>
+      </div>
+
+      <p>
+        There's also a compounding authority problem. When a site has 300 pages targeting loosely related keywords, each page draws a fraction of the site's overall topical authority. When a site has 30 pages, each tightly focused and deeply useful, each page carries more weight. Depth of coverage on fewer topics almost always outperforms breadth across many — especially for small and mid-sized sites that don't have the domain authority to compete at scale.
+      </p>
+
+      <div class="section-rule"><span>What Makes It Exceptional</span></div>
+
+      <h2>The Five Qualities of a <em>Page That Actually Ranks</em></h2>
+
+      <p>
+        "Write better content" is easy to say and genuinely difficult to operationalize. So here's the concrete definition we use when evaluating whether a page is worth publishing — or whether an existing page is worth keeping.
+      </p>
+
+      <div class="step-blocks">
+        <div class="step-block">
+          <div class="step-block-num">01</div>
+          <div class="step-block-content">
+            <h4>It answers one question completely</h4>
+            <p>The best-ranking pages are not comprehensive guides to broad topics. They're the definitive answer to a specific question. The tighter the scope, the clearer the relevance signal to Google — and the more useful the page is to the person who found it. If your page is trying to cover ten sub-topics, it's probably trying to rank for ten different things and succeeding at none of them.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">02</div>
+          <div class="step-block-content">
+            <h4>It contains something the other pages don't</h4>
+            <p>Original data. A framework you developed. A case study from your own work. An honest counterargument to the conventional wisdom. Something that can't be generated by looking at the current page-one results and synthesizing them. If your page contains no unique information or perspective, it gives Google no reason to rank it above the pages that already exist.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">03</div>
+          <div class="step-block-content">
+            <h4>It matches the actual search intent</h4>
+            <p>Search intent is not just about the keyword — it's about what the person searching actually wants to accomplish. Someone searching "best CRM for small business" wants a comparison, not a definition of CRM. Someone searching "how to migrate a WordPress site" wants step-by-step instructions, not a blog post about why migrations are important. Mismatching intent is one of the most common reasons good content fails to rank.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">04</div>
+          <div class="step-block-content">
+            <h4>It's written by someone who actually knows the subject</h4>
+            <p>E-E-A-T's first E — Experience — is the hardest to fake and the most valuable to demonstrate. Content written by someone who has genuinely done the thing they're writing about reads differently from content assembled from secondary sources. Specific details, honest caveats, and first-person examples are signals of real knowledge that both readers and Google respond to.</p>
+          </div>
+        </div>
+        <div class="step-block">
+          <div class="step-block-num">05</div>
+          <div class="step-block-content">
+            <h4>It earns links without being asked</h4>
+            <p>The ultimate test of whether a piece of content is genuinely exceptional is whether other sites link to it voluntarily. Pages that rank well over the long term almost always have earned links not from outreach campaigns, but because someone found the page useful enough to reference. If you can't imagine why another site would spontaneously link to your page, ask yourself what you would need to add to make that happen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-rule"><span>The Audit</span></div>
+
+      <h2>What to Do With <em>Your Existing Content</em></h2>
+
+      <p>
+        Most sites that have been following a volume strategy for any length of time have a content library that contains a handful of genuinely strong pages buried under a large number of weak ones. Before publishing anything new, it's worth diagnosing what you already have.
+      </p>
+
+      <p>
+        Pull your content inventory into a spreadsheet. For each page, record its current organic traffic, its target keyword, and its average ranking position from Google Search Console. Then sort by traffic. What you'll almost always find is a power law distribution: the top 10–20% of your pages are driving 80–90% of your organic traffic. The rest are largely invisible.
+      </p>
+
+      <div class="callout">
+        <span class="callout-label">The Content Audit Principle</span>
+        <p>Before writing a single new word, run a content audit. Identify your top performers and protect them. Identify your cannibalization pairs and consolidate them. Identify your dead weight and remove or redirect it. In most cases, pruning and strengthening what you have will move rankings faster than publishing new content.</p>
+      </div>
+
+      <p>
+        Those invisible pages fall into three categories, each requiring a different response.
+      </p>
+
+      <ol>
+        <li>
+          <span class="list-num">01</span>
+          <div class="list-content">
+            <strong>Cannibalization pairs</strong>
+            <span>Two or more pages targeting the same or closely overlapping keywords, splitting the ranking signal. The fix is consolidation — pick the stronger page, redirect the weaker one to it, and fold any unique content from the weaker page into the stronger one. One great page almost always outranks two mediocre ones targeting the same query.</span>
+          </div>
+        </li>
+        <li>
+          <span class="list-num">02</span>
+          <div class="list-content">
+            <strong>Thin pages with salvageable topics</strong>
+            <span>Pages that target a legitimate keyword but don't do it justice — short posts, shallow coverage, outdated information. These are worth expanding and updating rather than replacing. Treat them as drafts for the page they should have been. Add original insight, bring the data current, and extend the coverage to match or exceed what currently ranks above you.</span>
+          </div>
+        </li>
+        <li>
+          <span class="list-num">03</span>
+          <div class="list-content">
+            <strong>Dead weight with no path to value</strong>
+            <span>Pages that target obscure long-tail keywords with no traffic potential, outdated news posts with no evergreen value, or content created to fill a calendar slot that no one ever searched for. These should be removed and redirected to the closest relevant page. Every low-quality page on your site is a small dilution of the overall quality signal you're sending to Google.</span>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-rule"><span>The New Strategy</span></div>
+
+      <h2>What a Better Content Strategy <em>Actually Looks Like</em></h2>
+
+      <p>
+        The alternative to a volume strategy isn't a slow strategy. It's a focused one. Instead of a content calendar with a fixed publishing cadence, you work from a content brief: a defined list of the topics where you have a genuine right to win, ranked by search volume and business value.
+      </p>
+
+      <p>
+        For each topic, you produce one page — the page. Not a first draft of it, not a 500-word overview that can be expanded later. The complete, authoritative, linkable version of that page, written by someone who knows the subject, containing something no other page contains, formatted to match the intent of the searcher. Then you stop. You move on to the next topic.
+      </p>
+
+      <p>
+        This approach produces fewer pages per year. It is not unusual for a focused content strategy to result in 10–15 new pages in a year rather than 100. But those 10–15 pages will collectively generate more traffic, more links, and more durable rankings than 100 pages of average quality — because each one is built to be the best answer in its category, not just another answer.
+      </p>
+
+      <p>
+        That's the razor applied to content. Not less effort — sharper effort. The question isn't how much you publish. It's whether what you publish is worth reading. Everything that doesn't clear that bar is content you shouldn't be writing.
+      </p>
+
+      <div class="article-end-cta">
+        <h3>Want a content strategy <em>built to rank?</em></h3>
+        <p>We'll identify the topics where you have a genuine right to win — and build pages worth linking to.</p>
+        <a class="btn-primary" href="quote.html">Get a Free Quote →</a>
+      </div>
+
+    </article>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="article-sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-block">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#"><span class="toc-num">01</span>What Changed and Why It Matters</a></li>
+          <li><a href="#"><span class="toc-num">02</span>Five Qualities of a Page That Ranks</a></li>
+          <li><a href="#"><span class="toc-num">03</span>What to Do With Your Existing Content</a></li>
+          <li><a href="#"><span class="toc-num">04</span>What a Better Content Strategy Looks Like</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h4>Share This Article</h4>
+        <div class="share-row">
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            Share on X
+          </a>
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            Share on LinkedIn
+          </a>
+          <a class="share-btn" href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            Copy Link
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <h4>Related Articles</h4>
+        <a class="related-post" href="blog-seo-audits.html">
+          <span class="related-tag">Technical SEO</span>
+          <span class="related-title">Why 90% of SEO Audits Are Overcomplicated</span>
+        </a>
+        <a class="related-post" href="blog-seo-retainers.html">
+          <span class="related-tag">Strategy</span>
+          <span class="related-title">The Case Against Monthly SEO Retainers</span>
+        </a>
+        <a class="related-post" href="blog-medieval-monk.html">
+          <span class="related-tag">Philosophy</span>
+          <span class="related-title">Why We Named the Company After a Medieval Monk</span>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     RELATED ARTICLES
+════════════════════════════════════════ -->
+<section class="related-section">
+  <div class="container">
+    <div class="eyebrow">Keep Reading</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,3rem);">More from the<br><em>Occam Journal.</em></h2>
+
+    <div class="related-grid">
+      <a class="related-card" href="blog-seo-audits.html">
+        <span class="blog-tag">Technical SEO</span>
+        <h3>Why 90% of SEO Audits Are Overcomplicated (And What to Do Instead)</h3>
+        <p>Most audits surface 200+ issues and solve none of them. Here's the Occam method for finding the three fixes that actually move rankings.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+
+      <a class="related-card" href="blog-seo-retainers.html">
+        <span class="blog-tag">Strategy</span>
+        <h3>The Case Against Monthly SEO Retainers</h3>
+        <p>Most retainers are structured to maximize agency revenue, not results. Here's when project-based work is smarter — and when it isn't.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+
+      <a class="related-card" href="blog-medieval-monk.html">
+        <span class="blog-tag">Philosophy</span>
+        <h3>Why We Named the Company After a Medieval Monk</h3>
+        <p>Occam's Razor isn't just a clever name. It's the operating principle behind every strategy we write. Here's what that means in practice.</p>
+        <span class="read-more-arrow">Read Article →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-wordmark">Occam <span>SEO</span></span>
+        <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="quote.html">Technical SEO</a></li>
+          <li><a href="quote.html">Content Strategy</a></li>
+          <li><a href="quote.html">Link Building</a></li>
+          <li><a href="quote.html">Local SEO</a></li>
+          <li><a href="quote.html">SEO Audits</a></li>
+          <li><a href="quote.html">Website Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@occam-seo.com">hello@occam-seo.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Occam SEO. All rights reserved.</p>
+      <span class="footer-slogan">"Cut what doesn't rank."</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
