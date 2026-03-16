@@ -936,7 +936,7 @@
           <li><a href="services.html">Technical SEO</a></li>
           <li><a href="services.html">Content Strategy</a></li>
           <li><a href="services.html">Link Building</a></li>
-          <li><a href="serrvices.html">Local SEO</a></li>
+          <li><a href="services.html">Local SEO</a></li>
           <li><a href="services.html">SEO Audits</a></li>
           <li><a href="services.html">Website Design</a></li>
         </ul>
@@ -953,7 +953,7 @@
           <p itemprop="email"><a href="mailto:john@occam-seo.com">john@occam-seo.com</a></p>
           <a href="https://www.linkedin.com/company/occam-seo/" itemprop="sameAs">LinkedIn</a>
        </div>
-    </div>
+      </div>
     <div class="footer-bottom">
       <p>© 2026 Occam SEO. All rights reserved.</p>
       <span class="footer-slogan">"Cut what doesn't rank."</span>
@@ -964,9 +964,9 @@
 
 
 <script>
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    // Basic validation
+
     const email = document.getElementById('email').value.trim();
     const fname = document.getElementById('fname').value.trim();
     if (!fname || !email) {
@@ -974,9 +974,42 @@
       document.getElementById('email').style.borderColor = !email ? '#c0392b' : '';
       return;
     }
-    document.getElementById('quote-form-wrap').style.display = 'none';
-    document.getElementById('success-msg').classList.add('show');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const services = [...document.querySelectorAll('input[name="service"]:checked')]
+      .map(cb => cb.value).join(', ');
+
+    const data = {
+      first_name:        document.getElementById('fname').value,
+      last_name:         document.getElementById('lname').value,
+      email:             document.getElementById('email').value,
+      phone:             document.getElementById('phone').value,
+      company:           document.getElementById('company').value,
+      website:           document.getElementById('website').value,
+      budget:            document.getElementById('budget').value,
+      timeline:          document.getElementById('timeline').value,
+      services:          services,
+      current_situation: document.getElementById('current').value,
+      goal:              document.getElementById('goal').value,
+      heard:             document.getElementById('heard').value
+    };
+
+    try {
+      const response = await fetch('https://formspree.io/f/mlgppzwv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('quote-form-wrap').style.display = 'none';
+        document.getElementById('success-msg').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('Something went wrong. Please email us directly at john@occam-seo.com');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please email us directly at john@occam-seo.com');
+    }
   }
 </script>
 
