@@ -194,14 +194,14 @@
     .nav-dropdown {
       display: none;
       position: absolute;
-      top: calc(100% + 12px);
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
       background: var(--bg2);
       border: 1px solid rgba(212,168,67,0.18);
       border-top: 2px solid var(--gold);
       min-width: 210px;
-      padding: 8px 0;
+      padding: 12px 0 8px 0;  /* top padding creates the gap visually */
       z-index: 2000;
       list-style: none;
       box-shadow: 0 16px 40px rgba(0,0,0,0.45);
