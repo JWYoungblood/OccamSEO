@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occam SEO — Rate Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #F7F6F2;
+      color: #1a1a18;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .rc-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 0.5px solid rgba(0,0,0,0.15);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      gap: 4px;
+    }
+
+    .rc-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: #1a1a18;
+    }
+
+    .rc-logo em {
+      font-style: italic;
+      color: #888780;
+    }
+
+    .rc-tagline {
+      font-size: 11px;
+      font-weight: 300;
+      color: #888780;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rc-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888780;
+      margin: 0 0 1.25rem;
+    }
+
+    .rc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .rc-card {
+      background: #ffffff;
+      border: 0.5px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.15s;
+    }
+
+    .rc-card:hover {
+      border-color: rgba(0,0,0,0.25);
+    }
+
+    .rc-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .rc-card-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1a1a18;
+    }
+
+    .rc-badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .rc-badge-flat   { background: #E1F5EE; color: #0F6E56; }
+    .rc-badge-hourly { background: #E6F1FB; color: #185FA5; }
+    .rc-badge-bundle { background: #EEEDFE; color: #534AB7; }
+
+    .rc-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .rc-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 34px;
+      font-weight: 400;
+      color: #1a1a18;
+      line-height: 1;
+    }
+
+    .rc-price-unit {
+      font-size: 13px;
+      color: #5F5E5A;
+      font-weight: 300;
+    }
+
+    .rc-divider {
+      border: none;
+      border-top: 0.5px solid rgba(0,0,0,0.12);
+    }
+
+    .rc-desc {
+      font-size: 13px;
+      color: #5F5E5A;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .rc-range {
+      font-size: 12px;
+      color: #888780;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .rc-range-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    .rc-link-types {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .rc-link-item {
+      font-size: 12px;
+      color: #5F5E5A;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .rc-link-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #EF9F27;
+      flex-shrink: 0;
+    }
+
+    .rc-featured {
+      border-color: rgba(0,0,0,0.25);
+      grid-column: 1 / -1;
+    }
+
+    .rc-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .rc-includes-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888780;
+      font-weight: 500;
+    }
+
+    .rc-bundle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .rc-bundle-item {
+      background: #F7F6F2;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #5F5E5A;
+      font-weight: 400;
+    }
+
+    .rc-bundle-item strong {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888780;
+      margin-bottom: 2px;
+    }
+
+    .rc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 0.5px solid rgba(0,0,0,0.12);
+      padding-top: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .rc-footer-note {
+      font-size: 11px;
+      color: #888780;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .rc-footer-cta {
+      font-size: 12px;
+      font-weight: 500;
+      color: #5F5E5A;
+      text-decoration: none;
+      border: 0.5px solid rgba(0,0,0,0.25);
+      padding: 6px 16px;
+      border-radius: 8px;
+      background: none;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .rc-footer-cta:hover {
+      background: #F0EFE9;
+    }
+
+    @media (max-width: 600px) {
+      .rc-bundle-grid { grid-template-columns: 1fr; }
+      .rc-grid { grid-template-columns: 1fr; }
+      .rc-featured { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="rc-header">
+      <div class="rc-logo">Occam <em>SEO</em></div>
+      <div class="rc-tagline">Rate card &mdash; Services &amp; Pricing</div>
+    </div>
+
+    <div class="rc-label">Services</div>
+
+    <div class="rc-grid">
+
+      <div class="rc-card">
+        <div class="rc-card-header">
+          <p class="rc-card-title">SEO audit</p>
+          <span class="rc-badge rc-badge-flat">Flat fee</span>
+        </div>
+        <div class="rc-price-row">
+          <span class="rc-price">$300</span>
+          <span class="rc-price-unit">/ audit</span>
+        </div>
+        <hr class="rc-divider">
+        <p class="rc-desc">A single comprehensive audit that cuts to the issues causing your ranking problems — delivered in clear, actionable language.</p>
+      </div>
+
+      <div class="rc-card">
+        <div class="rc-card-header">
+          <p class="rc-card-title">Local SEO</p>
+          <span class="rc-badge rc-badge-hourly">Hourly</span>
+        </div>
+        <div class="rc-price-row">
+          <span class="rc-price">$70</span>
+          <span class="rc-price-unit">/ hr</span>
+        </div>
+        <hr class="rc-divider">
+        <p class="rc-desc">Rank higher in the local map pack and organic results in your market with a streamlined, no-fluff local SEO system.</p>
+        <div class="rc-range"><div class="rc-range-dot"></div>Typical engagement: 10–20 hrs/month</div>
+      </div>
+
+      <div class="rc-card">
+        <div class="rc-card-header">
+          <p class="rc-card-title">Technical SEO</p>
+          <span class="rc-badge rc-badge-hourly">Hourly</span>
+        </div>
+        <div class="rc-price-row">
+          <span class="rc-price">$70</span>
+          <span class="rc-price-unit">/ hr</span>
+        </div>
+        <hr class="rc-divider">
+        <p class="rc-desc">We audit your site's foundations — crawlability, Core Web Vitals, structured data, indexation — and fix what's holding you back.</p>
+        <div class="rc-range"><div class="rc-range-dot"></div>Typical project: 15–30 hrs</div>
+      </div>
+
+      <div class="rc-card">
+        <div class="rc-card-header">
+          <p class="rc-card-title">Link building</p>
+          <span class="rc-badge rc-badge-hourly">Hourly</span>
+        </div>
+        <div class="rc-price-row">
+          <span class="rc-price">$60</span>
+          <span class="rc-price-unit">/ hr</span>
+        </div>
+        <hr class="rc-divider">
+        <p class="rc-desc">Strategic link building across internal, external, and social channels — only the links that genuinely move rankings. No PBNs, no spam.</p>
+        <div class="rc-link-types">
+          <div class="rc-link-item"><div class="rc-link-dot"></div>Internal linking &amp; site architecture</div>
+          <div class="rc-link-item"><div class="rc-link-dot"></div>External outreach &amp; earned backlinks</div>
+          <div class="rc-link-item"><div class="rc-link-dot"></div>Social media link strategy</div>
+        </div>
+      </div>
+
+      <div class="rc-card rc-featured">
+        <div class="rc-card-header">
+          <p class="rc-card-title">Website Design</p>
+          <span class="rc-badge rc-badge-bundle">Full bundle</span>
+        </div>
+        <div class="rc-price-row">
+          <span class="rc-price">$90</span>
+          <span class="rc-price-unit">/ hr</span>
+        </div>
+        <hr class="rc-divider">
+        <p class="rc-desc">Clean, fast, conversion-focused websites architected for search from the ground up. Includes four supporting services at no additional charge.</p>
+        <div class="rc-includes">
+          <div class="rc-includes-label">Included with every build</div>
+          <div class="rc-bundle-grid">
+            <div class="rc-bundle-item">
+              <strong>Technical SEO</strong>
+              Site foundations built right from day one
+            </div>
+            <div class="rc-bundle-item">
+              <strong>Local SEO</strong>
+              Rank higher in the areas that matter
+            </div>
+            <div class="rc-bundle-item">
+              <strong>Content Strategy</strong>
+              Keyword research &amp; page architecture
+            </div>
+            <div class="rc-bundle-item">
+              <strong>Link Building</strong>
+              Earned authority from sources that matter
+            </div>
+            <div class="rc-bundle-item">
+              <strong>Typical project</strong>
+              20–50 hrs
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rc-footer">
+      <span class="rc-footer-note">All rates in USD &middot; Estimates vary by project scope &middot; Free quote available</span>
+      <a class="rc-footer-cta" href="https://www.occam-seo.com/quote.html">Get a free quote &rarr;</a>
+    </div>
+
+  </div>
+</body>
+</html>
