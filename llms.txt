@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Occam SEO is an SEO agency based in Apex, North Carolina, offering technical SEO, local SEO, SEO content writing, SEO keyword strategies, comprehensive SEO audits, and website design and development for small and mid-sized businesses. Occam SEO LLC serves clients in the Raleigh–Durham Triangle and beyond. SEO services are billed hourly; audits and new websites are fixed-fee.</h1>
+
+<h2>## Services</h2>
+<p>
+- [Technical SEO](https://occam-seo.com/services/technical-seo): Site audits, crawlability and indexing fixes, sitemaps, duplicate-URL cleanup, and on-page optimization, billed hourly
+- [SEO Audit](https://occam-seo.com/services/seo-audit): A full comprehensive audit with a prioritized SEO improvement action plan
+- [Website Design & Development](https://occam-seo.com/services/web-design): New, SEO-ready websites built for a fixed fee
+</p>
+<h2>## About</h2>
+<p>
+- [About Occam SEO](https://occam-seo.com/about): Founder John W. Youngblood and the agency's approach
+- [Contact](https://occam-seo.com/contact): How to request a quote or book a consultation
+</p>
+<h2>## Optional</h2>
+<p>
+- [Blog](https://occam-seo.com/blog): SEO guides and articles
+</p>
+</body>
+</html>
