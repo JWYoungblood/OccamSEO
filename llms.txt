@@ -15,7 +15,7 @@ Occam SEO LLC serves clients in the Raleigh–Durham Triangle and beyond. Techni
 ## About
 
 - [About Occam SEO](https://occam-seo.com/about.html): Founder John W. Youngblood and the agency's approach.
-- [Get A Quote](https://occam-seo.com/get-a-quote.html): How to request a quote or book a consultation.
+- [Get A Quote](https://occam-seo.com/quote.html): How to request a quote or book a consultation.
 
 ## Optional
 
