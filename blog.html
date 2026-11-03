@@ -704,7 +704,7 @@
       max-width: 280px;
     }
 
-    .footer-col h4 {
+    .footer-col h3 {
       font-family: var(--font-mono);
       font-size: 0.65rem;
       letter-spacing: 0.15em;
@@ -826,6 +826,7 @@
       <button class="filter-btn" onclick="filterPosts('content-strategy')">Content Strategy</button>
       <button class="filter-btn" onclick="filterPosts('philosophy')">Philosophy</button>
       <button class="filter-btn" onclick="filterPosts('strategy')">Strategy</button>
+      <button class="filter-btn" id="filter-local-seo" onclick="filterPosts('local-seo')" aria-label="Local SEO blog posts">Local SEO</button>
     </div>
   </div>
 </section>
@@ -901,6 +902,16 @@
       </div>
     </article>
 
+    <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting" data-category="local-seo">
+      <div class="blog-tag">Local SEO</div>
+      <h3 itemprop="headline">Local SEO in Raleigh and How to Rank Higher</h3>
+      <p itemprop="description">Learn how to rank higher in your local service area with local SEO in Raleigh. Get better visibility and discover why Occam SEO stands out.</p>
+      <div class="blog-card-footer">
+        <div><a class="blog-read-more" href="blog-local-seo-raleigh.html">Read Article</a></div>
+        <span class="blog-date" itemprop="datePublished" content="2026-10-31">Oct 31 · 3 min</span>
+      </div>
+    </article>
+
   </div>
 
   <!-- No results message -->
@@ -960,6 +971,15 @@
         </div>
       </a>
 
+      <a class="post-row" href="blog-local-seo-raleigh.html" itemscope itemtype="https://schema.org/BlogPosting">
+        <span class="post-row-tag">Local SEO</span>
+        <span class="post-row-title" itemprop="headline">Local SEO in Raleigh and How to Rank Higher</span>
+        <div class="post-row-meta">
+          <span class="post-row-date" itemprop="datePublished" content="2026-10-31">Oct 31, 2026</span>
+          <span class="post-row-time">3 min read</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -976,7 +996,7 @@
         <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
       </div>
       <div class="footer-col">
-        <h4>Pages</h4>
+        <h3>Pages</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -986,7 +1006,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="technical-seo.html">Technical SEO</a></li>
           <li><a href="local-seo.html">Local SEO</a></li>
@@ -997,7 +1017,7 @@
         </ul>
       </div>
      <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact</h3>
         <div itemscope itemtype="https://schema.org/LocalBusiness">
           <p itemprop="name">Occam SEO</p>
             <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -1020,10 +1040,11 @@
 
 <script>
   // ── Category filter ──
-  function filterPosts(category) {
+  function filterPosts(category, button) {
     // Update active button
+    button = button || (window.event && window.event.target);
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    if (button) button.classList.add('active');
 
     // Show/hide cards
     const cards = document.querySelectorAll('#blog-grid .blog-card');
@@ -1039,6 +1060,12 @@
 
     // Show no-results message if needed
     document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  // ── Open a category from a link, e.g. blog.html#local-seo ──
+  if (window.location.hash === '#local-seo') {
+    filterPosts('local-seo', document.getElementById('filter-local-seo'));
+    document.getElementById('blog-grid').scrollIntoView();
   }
 
   // ── Newsletter ──
