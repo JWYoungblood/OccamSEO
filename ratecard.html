@@ -3,431 +3,734 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Occam SEO — Rate Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- ── SEO Meta ── -->
+  <title>Rate Card &amp; Pricing | Occam SEO</title>
+  <meta name="description" content="Occam SEO pricing: SEO audits, website cleanup, website design, The Razor Package, corporate rates, and consulting. SEO services in Apex, NC and the Raleigh-Durham area.">
+  <meta name="author" content="Occam SEO">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.occam-seo.com/ratecard.html">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.occam-seo.com/ratecard.html">
+  <meta property="og:title" content="Rate Card &amp; Pricing | Occam SEO">
+  <meta property="og:description" content="Simple, transparent pricing for SEO and website services.">
+  <meta property="og:image" content="https://www.occam-seo.com/og-image.jpg">
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    /* ─────────────────────────────────────────
+       RESET & VARIABLES (from index.html)
+    ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:        #06101e;
+      --bg2:       #0b1929;
+      --bg3:       #102236;
+      --ink:       #ffffff;
+      --ink2:      #b8c8d8;
+      --ink3:      #5a7a96;
+      --gold:      #d4a843;
+      --gold2:     #f0c96a;
+      --silver:    #c0cdd8;
+      --blue:      #2a6fbd;
+      --blue2:     #3d8ee0;
+      --razor:     #c0cdd8;
+
+      --font-serif:  'Cormorant Garamond', Georgia, serif;
+      --font-mono:   'DM Mono', monospace;
+      --font-sans:   'Barlow', sans-serif;
+
+      --max-w: 1160px;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: #F7F6F2;
-      color: #1a1a18;
-      min-height: 100vh;
-      padding: 3rem 1.5rem;
-    }
-
-    .page {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    .rc-header {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      border-bottom: 0.5px solid rgba(0,0,0,0.15);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
-      gap: 4px;
-    }
-
-    .rc-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 28px;
-      font-weight: 400;
-      letter-spacing: -0.5px;
-      color: #1a1a18;
-    }
-
-    .rc-logo em {
-      font-style: italic;
-      color: #888780;
-    }
-
-    .rc-tagline {
-      font-size: 11px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
       font-weight: 300;
-      color: #888780;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    .rc-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #888780;
-      margin: 0 0 1.25rem;
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
     }
+
+    /* ─────────────────────────────────────────
+       NAVIGATION (from index.html)
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 14px; cursor: pointer; text-decoration: none; }
+    .logo-mark { width: 38px; height: 38px; flex-shrink: 0; }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+    .nav-wordmark span { color: var(--gold); }
+
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-has-dropdown { position: relative; }
+
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg2);
+      border: 1px solid rgba(212,168,67,0.18);
+      border-top: 2px solid var(--gold);
+      min-width: 210px;
+      padding: 12px 0 8px 0;
+      z-index: 2000;
+      list-style: none;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    }
+
+    .nav-dropdown li a {
+      display: block;
+      padding: 11px 22px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-dropdown li a:hover { background: var(--bg3); color: var(--gold); }
+
+    .nav-has-dropdown:hover .nav-dropdown,
+    .nav-has-dropdown:focus-within .nav-dropdown { display: block; }
+
+    .nav-has-dropdown > a::after { content: ' ▾'; font-size: 0.6rem; opacity: 0.6; }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+    /* ─────────────────────────────────────────
+       SHARED UTILS (from index.html)
+    ───────────────────────────────────────── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 60px);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      line-height: 1.15;
+    }
+
+    /* ─────────────────────────────────────────
+       RATE CARD
+    ───────────────────────────────────────── */
+    .rc-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 48px;
+      background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    .rc-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      margin-bottom: 20px;
+    }
+    .rc-hero h1 em { font-style: italic; color: var(--gold); }
+
+    .rc-hero p {
+      color: var(--ink2);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .rc-body { padding: 56px 0 120px; }
 
     .rc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 2px;
     }
 
     .rc-card {
-      background: #ffffff;
-      border: 0.5px solid rgba(0,0,0,0.12);
-      border-radius: 12px;
-      padding: 1.25rem;
+      background: var(--bg2);
+      padding: 40px 36px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      transition: border-color 0.15s;
+      gap: 16px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      position: relative;
     }
+    .rc-card:hover { background: var(--bg3); border-bottom-color: var(--gold); }
 
-    .rc-card:hover {
-      border-color: rgba(0,0,0,0.25);
-    }
+    .rc-wide, .rc-featured { grid-column: 1 / -1; }
+
+    .rc-featured { border-top: 2px solid var(--gold); }
 
     .rc-card-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 8px;
+      gap: 12px;
     }
 
     .rc-card-title {
-      font-size: 15px;
-      font-weight: 500;
-      color: #1a1a18;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
     }
 
     .rc-badge {
-      font-size: 11px;
-      font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border: 1px solid;
       white-space: nowrap;
       flex-shrink: 0;
     }
+    .rc-badge-flat   { color: var(--gold);   border-color: rgba(212,168,67,0.45); }
+    .rc-badge-hourly { color: var(--blue2);  border-color: rgba(61,142,224,0.45); }
+    .rc-badge-bundle { color: var(--silver); border-color: rgba(192,205,216,0.45); }
 
-    .rc-badge-flat   { background: #E1F5EE; color: #0F6E56; }
-    .rc-badge-hourly { background: #E6F1FB; color: #185FA5; }
-    .rc-badge-bundle { background: #EEEDFE; color: #534AB7; }
-
-    .rc-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
-    }
+    .rc-price-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 
     .rc-price {
-      font-family: 'DM Serif Display', serif;
-      font-size: 34px;
-      font-weight: 400;
-      color: #1a1a18;
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--gold);
       line-height: 1;
     }
 
     .rc-price-unit {
-      font-size: 13px;
-      color: #5F5E5A;
-      font-weight: 300;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--ink2);
     }
 
-    .rc-divider {
-      border: none;
-      border-top: 0.5px solid rgba(0,0,0,0.12);
-    }
+    .rc-divider { border: none; border-top: 1px solid var(--bg3); }
+    .rc-card:hover .rc-divider { border-top-color: rgba(212,168,67,0.2); }
 
     .rc-desc {
-      font-size: 13px;
-      color: #5F5E5A;
-      line-height: 1.65;
-      font-weight: 300;
+      font-size: 0.92rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      max-width: 760px;
     }
 
-    .rc-range {
-      font-size: 12px;
-      color: #888780;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .rc-range-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.2);
-      flex-shrink: 0;
-    }
-
-    .rc-link-types {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .rc-link-item {
-      font-size: 12px;
-      color: #5F5E5A;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .rc-link-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #EF9F27;
-      flex-shrink: 0;
-    }
-
-    .rc-featured {
-      border-color: rgba(0,0,0,0.25);
-      grid-column: 1 / -1;
-    }
-
-    .rc-includes {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .rc-includes { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
 
     .rc-includes-label {
-      font-size: 11px;
-      letter-spacing: 0.1em;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #888780;
-      font-weight: 500;
+      color: var(--gold);
     }
 
     .rc-bundle-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 2px;
     }
 
     .rc-bundle-item {
-      background: #F7F6F2;
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 12px;
-      color: #5F5E5A;
-      font-weight: 400;
+      background: var(--bg);
+      border-left: 2px solid var(--gold);
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: var(--ink2);
+      line-height: 1.6;
     }
 
     .rc-bundle-item strong {
       display: block;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #888780;
-      margin-bottom: 2px;
+      color: var(--ink);
+      margin-bottom: 4px;
     }
 
     .rc-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 0.5px solid rgba(0,0,0,0.12);
-      padding-top: 1rem;
-      margin-top: 1.5rem;
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      margin-top: 48px;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 16px;
     }
 
     .rc-footer-note {
-      font-size: 11px;
-      color: #888780;
-      font-weight: 300;
+      font-family: var(--font-serif);
       font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ink3);
     }
 
-    .rc-footer-cta {
-      font-size: 12px;
-      font-weight: 500;
-      color: #5F5E5A;
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 16px 40px;
       text-decoration: none;
-      border: 0.5px solid rgba(0,0,0,0.25);
-      padding: 6px 16px;
-      border-radius: 8px;
-      background: none;
-      font-family: inherit;
+      border: none;
       cursor: pointer;
-      transition: background 0.15s;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 500;
+    }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+
+    /* ─────────────────────────────────────────
+       FOOTER (from index.html)
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(212,168,67,0.1);
+      padding: 64px 0 36px;
     }
 
-    .rc-footer-cta:hover {
-      background: #F0EFE9;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h3 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--bg3);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--ink3);
+    }
+
+    .footer-slogan {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--ink3);
+    }
+
+    /* ─────────────────────────────────────────
+       ANIMATION
+    ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .rc-hero .container > * { animation: fadeUp 0.7s ease both; }
+    .rc-hero .container > *:nth-child(2) { animation-delay: 0.1s; }
+    .rc-hero .container > *:nth-child(3) { animation-delay: 0.2s; }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 600px) {
-      .rc-bundle-grid { grid-template-columns: 1fr; }
       .rc-grid { grid-template-columns: 1fr; }
-      .rc-featured { grid-column: 1; }
+      .rc-bundle-grid { grid-template-columns: 1fr; }
+      .rc-card { padding: 32px 24px; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
 
-    <div class="rc-header">
-      <div class="rc-logo">Occam <em>SEO</em></div>
-      <div class="rc-tagline">Rate card &mdash; Services &amp; Pricing</div>
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <!-- Razor Blade at 45° intersecting rising bars -->
+    <svg class="logo-mark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;">
+
+      <!-- ═══ THREE RISING BARS ═══ -->
+      <!-- Baseline -->
+      <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <!-- Bar 1 — short, steel blue -->
+      <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <!-- Bar 2 — medium, blue -->
+      <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <!-- Bar 3 — tall, gold -->
+      <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+
+      <!-- ═══ CLASSIC RAZOR BLADE at ~45° ═══ -->
+      <g transform="rotate(-45, 26, 26)">
+        <!-- Main blade rectangle -->
+        <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <!-- Thick spine (top edge of blade) -->
+        <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
+        <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <!-- Sharp cutting edge — gold line at bottom -->
+        <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <!-- Bevel line -->
+        <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <!-- Center slot hole -->
+        <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
+        <!-- Corner notch lines -->
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Occam <span>SEO</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="blog.html" id="nav-blog">Blog</a></li>
+    <li class="nav-has-dropdown">
+      <a href="services.html" id="nav-services">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="technical-seo.html">Technical SEO</a></li>
+        <li><a href="local-seo.html">Local SEO</a></li>
+        <li><a href="seo-audits.html">SEO Audits</a></li>
+        <li><a href="content-strategy.html">Content Strategy</a></li>
+        <li><a href="link-building.html">Link Building</a></li>
+        <li><a href="website-design.html">Website Design</a></li>
+      </ul>
+    </li>
+    <li><a href="ratecard.html" id="nav-ratecard" class="active">Rate Card</a></li>
+    <li><a href="quote.html" id="nav-quote">Get a Quote</a></li>
+  </ul>
+
+  <a class="nav-cta" href="quote.html">Get a Quote</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     RATE CARD
+════════════════════════════════════════ -->
+<main>
+
+  <section class="rc-hero" aria-labelledby="rc-heading">
+    <div class="container">
+      <div class="eyebrow">Rate Card</div>
+      <h1 id="rc-heading">Services &amp; <em>pricing.</em></h1>
+      <p>Simple, transparent rates. No retainers you don't need, no line items that don't move rankings.</p>
     </div>
+  </section>
 
-    <div class="rc-label">Services</div>
+  <section class="rc-body" aria-label="Services and pricing">
+    <div class="container">
+      <div class="rc-grid">
 
-    <div class="rc-grid">
+        <div class="rc-card rc-wide">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title">SEO Audit</h2>
+            <span class="rc-badge rc-badge-flat">Flat fee</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$300</span>
+            <span class="rc-price-unit">/ audit</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">Site Health, AI Search Health, Technical SEO, Local visibility for your main keywords, competitive analysis, and linking structure for your business. All bundled up into one comprehensive audit.</p>
+        </div>
 
-      <div class="rc-card">
-        <div class="rc-card-header">
-          <p class="rc-card-title">SEO audit</p>
-          <span class="rc-badge rc-badge-flat">Flat fee</span>
+        <div class="rc-card rc-wide">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title">Website Cleanup</h2>
+            <span class="rc-badge rc-badge-hourly">Hourly</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$80</span>
+            <span class="rc-price-unit">/ hr</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">Already have a website? We fix broken links, outdated pages, slow load times, and mobile issues so your existing site works harder for your business. We'll run an audit of your website and give you a time estimate based on what we find.</p>
         </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$300</span>
-          <span class="rc-price-unit">/ audit</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">A single comprehensive audit that cuts to the issues causing your ranking problems — delivered in clear, actionable language.</p>
-      </div>
 
-      <div class="rc-card">
-        <div class="rc-card-header">
-          <p class="rc-card-title">Local SEO</p>
-          <span class="rc-badge rc-badge-hourly">Hourly</span>
-        </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$70</span>
-          <span class="rc-price-unit">/ hr</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">Rank higher in the local map pack and organic results in your market with a streamlined, no-fluff local SEO system.</p>
-        <div class="rc-range"><div class="rc-range-dot"></div>Typical engagement: 10–20 hrs/month</div>
-      </div>
-
-      <div class="rc-card">
-        <div class="rc-card-header">
-          <p class="rc-card-title">Technical SEO</p>
-          <span class="rc-badge rc-badge-hourly">Hourly</span>
-        </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$70</span>
-          <span class="rc-price-unit">/ hr</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">We audit your site's foundations — crawlability, Core Web Vitals, structured data, indexation — and fix what's holding you back.</p>
-        <div class="rc-range"><div class="rc-range-dot"></div>Typical project: 15–30 hrs</div>
-      </div>
-
-      <div class="rc-card">
-        <div class="rc-card-header">
-          <p class="rc-card-title">Link building</p>
-          <span class="rc-badge rc-badge-hourly">Hourly</span>
-        </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$60</span>
-          <span class="rc-price-unit">/ hr</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">Strategic link building across internal, external, and social channels — only the links that genuinely move rankings. No PBNs, no spam.</p>
-        <div class="rc-link-types">
-          <div class="rc-link-item"><div class="rc-link-dot"></div>Internal linking &amp; site architecture</div>
-          <div class="rc-link-item"><div class="rc-link-dot"></div>External outreach &amp; earned backlinks</div>
-          <div class="rc-link-item"><div class="rc-link-dot"></div>Social media link strategy</div>
-        </div>
-      </div>
-
-      <div class="rc-card rc-featured">
-        <div class="rc-card-header">
-          <p class="rc-card-title">Website Design</p>
-          <span class="rc-badge rc-badge-bundle">Full Bundle</span>
-        </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$90</span>
-          <span class="rc-price-unit">/ hr</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">Clean, fast, conversion-focused websites architected for search from the ground up. Includes four supporting services at no additional charge.</p>
-        <div class="rc-includes">
-          <div class="rc-includes-label">Included with every build</div>
-          <div class="rc-bundle-grid">
-            <div class="rc-bundle-item">
-              <strong>Technical SEO</strong>
-              Site foundations built right from day one
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Local SEO</strong>
-              Rank higher in the areas that matter
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Content Strategy</strong>
-              Keyword research &amp; page architecture
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Link Building</strong>
-              Earned authority from sources that matter
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Typical project</strong>
-              20–50 hrs
+        <div class="rc-card rc-featured">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title">Website Design</h2>
+            <span class="rc-badge rc-badge-bundle">Full Bundle</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$1000</span>
+            <span class="rc-price-unit">+ $60/hr</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">Clean, fast, conversion-focused websites made for search from the ground up. Includes four supporting services at no additional charge.</p>
+          <div class="rc-includes">
+            <div class="rc-includes-label">Included with every build</div>
+            <div class="rc-bundle-grid">
+              <div class="rc-bundle-item">
+                <strong>Technical SEO</strong>
+                Site foundations built right from day one
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Local SEO</strong>
+                Rank higher in the areas that matter
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Content Strategy</strong>
+                Keyword research &amp; page architecture
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Google Business Profile</strong>
+                Profile creation and optimization
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-       <div class="rc-card rc-featured">
-        <div class="rc-card-header">
-          <p class="rc-card-title"><em>The Razor Package</em></p>
-          <span class="rc-badge rc-badge-bundle">Full Bundle</span>
-        </div>
-        <div class="rc-price-row">
-          <span class="rc-price">$1399</span>
-          <span class="rc-price-unit">/mo</span>
-        </div>
-        <hr class="rc-divider">
-        <p class="rc-desc">Real-time website refresh with up-to-date content that works for your niche. The Razor Package includes all of our services plus constant updates to your business so you can rank higher month over month.</p>
-        <div class="rc-includes">
-          <div class="rc-includes-label">Included with every build</div>
-          <div class="rc-bundle-grid">
-            <div class="rc-bundle-item">
-              <strong>Technical SEO</strong>
-              Site foundations built right from day one
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Local SEO</strong>
-              Rank higher in the areas that matter
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Content Strategy</strong>
-              Keyword research &amp; page architecture
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Link Building</strong>
-              Earned authority from sources that matter
-            </div>
-             <div class="rc-bundle-item">
-              <strong>Press Requests</strong>
-              Citations and quotes that build authority for you
-            </div>
-             <div class="rc-bundle-item">
-              <strong>Constant Oversight</strong>
-              Updates to your business that fit the new meta
-            </div>
-            <div class="rc-bundle-item">
-              <strong>Typical project</strong>
-              10–15 hrs/week
+        <div class="rc-card rc-featured">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title"><em>The Razor Package</em></h2>
+            <span class="rc-badge rc-badge-bundle">Full Bundle</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$80</span>
+            <span class="rc-price-unit">/ hr</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">Real-time website refresh with up-to-date content that works for your niche. The Razor Package includes all of our services plus constant updates to your business so you can rank higher month over month. We charge $80/hr and work with your budget to identify how many hours we can work for you each month, with a 3-month minimum.</p>
+          <div class="rc-includes">
+            <div class="rc-includes-label">Included with every build</div>
+            <div class="rc-bundle-grid">
+              <div class="rc-bundle-item">
+                <strong>Technical SEO</strong>
+                Site foundations built right from day one
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Local SEO</strong>
+                Rank higher in the areas that matter
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Content Strategy</strong>
+                Keyword research &amp; page architecture
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Link Building</strong>
+                Earned authority from sources that matter
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Constant Oversight</strong>
+                Updates to your business that fit the new meta
+              </div>
+              <div class="rc-bundle-item">
+                <strong>Monthly Communication</strong>
+                We schedule a call every month to discuss necessary strategies and pain points in your business.
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="rc-card rc-wide">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title">Corporate Rate</h2>
+            <span class="rc-badge rc-badge-hourly">Hourly</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$65</span>
+            <span class="rc-price-unit">/ hr</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">If you're a company that is referring clients to us, we give you a discounted rate to adjust for acquisition costs. Contact us for service, pricing, and referral questions.</p>
+        </div>
+
+        <div class="rc-card rc-wide">
+          <div class="rc-card-header">
+            <h2 class="rc-card-title">Consulting</h2>
+            <span class="rc-badge rc-badge-flat">Monthly</span>
+          </div>
+          <div class="rc-price-row">
+            <span class="rc-price">$300</span>
+            <span class="rc-price-unit">/ mo</span>
+          </div>
+          <hr class="rc-divider">
+          <p class="rc-desc">Ongoing expert guidance on your SEO and website strategy, for businesses that want to handle the work in-house with a pro in their corner. This is perfect for companies with good SEO that are looking at new marketing strategies and outreach campaigns, or companies that need a marketing advisor.</p>
+        </div>
+
       </div>
 
+      <div class="rc-footer">
+        <span class="rc-footer-note">All rates in USD · Estimates vary by project scope · Free quote available</span>
+        <a class="btn-primary" href="quote.html">Get a free quote &rarr;</a>
+      </div>
     </div>
+  </section>
 
-    <div class="rc-footer">
-      <span class="rc-footer-note">All rates in USD &middot; Estimates vary by project scope &middot; Free quote available</span>
-      <a class="rc-footer-cta" href="https://www.occam-seo.com/quote.html">Get a free quote &rarr;</a>
+</main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span>
+          <p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="ratecard.html">Rate Card</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="technical-seo.html">Technical SEO</a></li>
+            <li><a href="local-seo.html">Local SEO</a></li>
+            <li><a href="content-strategy.html">Content Strategy</a></li>
+            <li><a href="link-building.html">Link Building</a></li>
+            <li><a href="seo-audits.html">SEO Audits</a></li>
+            <li><a href="website-design.html">Website Design</a></li>
+          </ul>
+        </div>
+
+     <div class="footer-col">
+      <h3>Contact</h3>
+        <div itemscope itemtype="https://schema.org/LocalBusiness">
+          <p itemprop="name">Occam SEO</p>
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="addressLocality">Apex</span>,
+              <span itemprop="addressRegion">NC</span>
+              <span itemprop="addressCountry">US</span>
+            </div>
+          <p itemprop="email"><a href="mailto:john@occam-seo.com">john@occam-seo.com</a></p>
+          <a href="https://www.linkedin.com/company/occam-seo/" itemprop="sameAs">LinkedIn</a>
+       </div>
+     </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Occam SEO. All rights reserved.</p>
+        <span class="footer-slogan">"Cut what doesn't rank."</span>
+      </div>
     </div>
+    </div>
+  </footer>
 
-  </div>
 </body>
 </html>
