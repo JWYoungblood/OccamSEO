@@ -57,15 +57,132 @@
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
     body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.025; pointer-events: none; z-index: 9999; }
-    nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(6,16,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,168,67,0.18); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 5vw, 60px); z-index: 1000; }
-    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-    .nav-wordmark { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; letter-spacing: 0.04em; color: var(--ink); }
-    .nav-wordmark span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink2); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-    .nav-cta { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 9px 20px; cursor: pointer; transition: background 0.2s, color 0.2s; text-decoration: none; }
-    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+    /* ─────────────────────────────────────────
+       NAVIGATION
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(6,16,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,168,67,0.18);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 60px);
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+      cursor: pointer; text-decoration: none;
+    }
+
+    /* SVG Razor Logo */
+    .logo-mark {
+      width: 38px; height: 38px;
+      flex-shrink: 0;
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+        /* ── Services Dropdown ── */
+    .nav-has-dropdown { position: relative; }
+ 
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg2);
+      border: 1px solid rgba(212,168,67,0.18);
+      border-top: 2px solid var(--gold);
+      min-width: 210px;
+      padding: 12px 0 8px 0;  /* top padding creates the gap visually */
+      z-index: 2000;
+      list-style: none;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    }
+ 
+    .nav-dropdown li a {
+      display: block;
+      padding: 11px 22px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+ 
+    .nav-dropdown li a:hover {
+      background: var(--bg3);
+      color: var(--gold);
+    }
+ 
+    .nav-has-dropdown:hover .nav-dropdown,
+    .nav-has-dropdown:focus-within .nav-dropdown {
+      display: block;
+    }
+ 
+    .nav-has-dropdown > a::after {
+      content: ' ▾';
+      font-size: 0.6rem;
+      opacity: 0.6;
+    }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 9px 20px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    /* Keep the breadcrumb nav element from inheriting the fixed site-header styles */
+    .breadcrumb { position: static; height: auto; background: none; backdrop-filter: none; border: 0; padding: 0; justify-content: flex-start; z-index: auto; }
+
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
     .eyebrow { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
     .eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
@@ -151,31 +268,61 @@
 <body>
 <nav>
   <a class="nav-logo" href="index.html">
-    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;flex-shrink:0;">
+    <!-- Razor Blade at 45° intersecting rising bars -->
+    <svg class="logo-mark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Occam SEO logo" style="width:48px;height:48px;">
+
+      <!-- ═══ THREE RISING BARS ═══ -->
+      <!-- Baseline -->
       <line x1="8" y1="44" x2="44" y2="44" stroke="#c0cdd8" stroke-width="0.8" opacity="0.35"/>
+      <!-- Bar 1 — short, steel blue -->
       <rect x="10" y="34" width="8" height="10" rx="0.5" fill="#3d5a72" opacity="0.95"/>
+      <!-- Bar 2 — medium, blue -->
       <rect x="22" y="26" width="8" height="18" rx="0.5" fill="#2a6fbd" opacity="0.95"/>
+      <!-- Bar 3 — tall, gold -->
       <rect x="34" y="16" width="8" height="28" rx="0.5" fill="#d4a843" opacity="0.95"/>
+
+      <!-- ═══ CLASSIC RAZOR BLADE at ~45° (top-right to bottom-left, edge facing down-right) ═══ -->
+      <!-- The blade is rotated 45°, centred around (26,26) -->
+      <!-- Blade body: long rectangle, rotated. Using transform on a group. -->
       <g transform="rotate(-45, 26, 26)">
+        <!-- Main blade rectangle -->
         <rect x="4" y="18" width="44" height="16" rx="1.5" fill="#0e1f30" stroke="#c0cdd8" stroke-width="1.1"/>
+        <!-- Thick spine (top edge of blade) -->
         <rect x="4" y="18" width="44" height="5" rx="1.5" fill="#c0cdd8" opacity="0.22"/>
         <line x1="4" y1="23" x2="48" y2="23" stroke="#c0cdd8" stroke-width="0.7" opacity="0.4"/>
+        <!-- Sharp cutting edge — gold line at bottom -->
         <line x1="4" y1="34" x2="48" y2="34" stroke="#d4a843" stroke-width="2"/>
+        <!-- Bevel line -->
         <line x1="4" y1="31" x2="48" y2="31" stroke="#c0cdd8" stroke-width="0.5" opacity="0.25" stroke-dasharray="3 3"/>
+        <!-- Center slot hole (classic safety blade detail) -->
         <rect x="18" y="23" width="16" height="8" rx="1" fill="none" stroke="#c0cdd8" stroke-width="0.9" opacity="0.55"/>
-        <line x1="4" y1="18" x2="9" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
+        <!-- Corner notch lines (classic blade detail) -->
+        <line x1="4"  y1="18" x2="9"  y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
         <line x1="48" y1="18" x2="43" y2="23" stroke="#c0cdd8" stroke-width="0.8" opacity="0.4"/>
       </g>
     </svg>
     <span class="nav-wordmark">Occam <span>SEO</span></span>
   </a>
+
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="quote.html">Get a Quote</a></li>
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="blog.html" id="nav-blog">Blog</a></li>
+    <li class="nav-has-dropdown">
+      <a href="services.html" id="nav-services" class="active">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="technical-seo.html">Technical SEO</a></li>
+        <li><a href="local-seo.html">Local SEO</a></li>
+        <li><a href="seo-audits.html">SEO Audits</a></li>
+        <li><a href="content-strategy.html">Content Strategy</a></li>
+        <li><a href="link-building.html">Link Building</a></li>
+        <li><a href="website-design.html">Website Design</a></li>
+      </ul>
+    </li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="quote.html" id="nav-quote">Get a Quote</a></li>
   </ul>
+
   <a class="nav-cta" href="quote.html">Get a Quote</a>
 </nav>
 
@@ -308,7 +455,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><span class="nav-wordmark">Occam <span style="color:var(--gold)">SEO</span></span><p>The simplest path to page one. We apply Occam's Razor to search engine optimization — stripping strategy down to only what works.</p></div>
-      <div class="footer-col"><h3>Pages</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="services.html">Services</a></li><li><a href="quote.html">Get a Quote</a></li></ul></div>
+      <div class="footer-col"><h3>Pages</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="quote.html">Get a Quote</a></li></ul></div>
       <div class="footer-col"><h3>Services</h3><ul><li><a href="technical-seo.html">Technical SEO</a></li><li><a href="content-strategy.html">Content Strategy</a></li><li><a href="link-building.html">Link Building</a></li><li><a href="local-seo.html">Local SEO</a></li><li><a href="seo-audits.html">SEO Audits</a></li><li><a href="website-design.html">Website Design</a></li></ul></div>
       <div class="footer-col"><h3>Contact</h3><div itemscope itemtype="https://schema.org/LocalBusiness"><p itemprop="name">Occam SEO</p><div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Apex</span>, <span itemprop="addressRegion">NC</span> <span itemprop="addressCountry">US</span></div><p itemprop="email"><a href="mailto:john@occam-seo.com">john@occam-seo.com</a></p><a href="https://www.linkedin.com/company/occam-seo/" itemprop="sameAs">LinkedIn</a></div></div>
     </div>
