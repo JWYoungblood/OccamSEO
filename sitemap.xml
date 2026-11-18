@@ -1,67 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://www.occam-seo.com/</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
     <loc>https://www.occam-seo.com/about.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
     <loc>https://www.occam-seo.com/services.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
-    <loc>https://www.occam-seo.com/blog.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.occam-seo.com/technical-seo.html</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
+  <url>
+    <loc>https://www.occam-seo.com/local-seo.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/seo-audits.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/content-strategy.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/link-building.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/website-design.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/pricing.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
   <url>
     <loc>https://www.occam-seo.com/quote.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
+  <url>
+    <loc>https://www.occam-seo.com/blog.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
   <url>
     <loc>https://www.occam-seo.com/blog-better-content.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
-    <loc>https://www.occam-seo.com/blog-seo-audits.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.occam-seo.com/blog-local-seo-raleigh.html</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
-    <loc>https://www.occam-seo.com/blog-seo-retainers.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.occam-seo.com/blog-local-seo-strategies.html</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
   <url>
     <loc>https://www.occam-seo.com/blog-medieval-monk.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-11-17</lastmod>
   </url>
-
+  <url>
+    <loc>https://www.occam-seo.com/blog-seo-audits.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.occam-seo.com/blog-seo-retainers.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
 </urlset>
