@@ -1,22 +1,40 @@
 # Occam SEO
 
-> Occam SEO is an SEO agency based in Apex, North Carolina, offering technical SEO, local SEO, SEO content strategies, comprehensive SEO audits, and website design and development for small and mid-sized businesses.
+> Occam SEO is an SEO consultancy based in Apex, North Carolina, offering technical SEO, local SEO, content strategy, link building, SEO audits, and website design and development for small and mid-sized businesses in the Raleigh-Durham-Chapel Hill area (the Triangle).
 
-Occam SEO LLC serves clients in the Raleigh–Durham Triangle and beyond. Technical SEO is billed hourly; audits and new websites are fixed-fee.
+Occam SEO LLC is founded and run by John W. Youngblood. The agency's approach is built on Occam's Razor: the simplest strategy that works wins, so it focuses on the few fixes and pages that actually move rankings. It serves Apex, Cary, Raleigh, Durham, and the wider Triangle. Contact: john@occam-seo.com.
 
 ## Services
 
-- [SEO Content Strategy] (https://occam-seo.com/content-strategy.html): Keyword analysis, and keyword content creation to improve rankings.
-- [Local SEO] (https://occam-seo.com/local-seo.html): Local SEO rankings, NAP consistency, and local business outreach for businesses in the Raleigh-Durham area of the Triangle.
-- [Technical SEO](https://occam-seo.com/technical-seo.html): Site audits, crawlability and indexing fixes, sitemaps, duplicate-URL cleanup, and on-page optimization, billed hourly.
-- [SEO Audit](https://occam-seo.com/seo-audits.html): A full comprehensive audit with a prioritized SEO improvement action plan.
-- [Website Design & Development](https://occam-seo.com/website-design.html): New, SEO-ready websites for Raleigh and Apex businesses built for a fixed fee.
+- [Services Overview](https://www.occam-seo.com/services.html): All Occam SEO services in one place.
+- [Technical SEO](https://www.occam-seo.com/technical-seo.html): Crawlability, Core Web Vitals, structured data, indexation, sitemaps, and duplicate-URL fixes.
+- [Local SEO](https://www.occam-seo.com/local-seo.html): Map pack and local organic rankings, Google Business Profile optimization, citations, and NAP consistency for Triangle-area businesses.
+- [SEO Audits](https://www.occam-seo.com/seo-audits.html): A comprehensive audit with a prioritized, plain-language action plan.
+- [Content Strategy](https://www.occam-seo.com/content-strategy.html): Keyword research and page architecture focused on fewer, better pages.
+- [Link Building](https://www.occam-seo.com/link-building.html): Earned links from relevant sources; no PBNs or spam.
+- [Website Design](https://www.occam-seo.com/website-design.html): Fast, SEO-ready websites built from the ground up.
+
+## Pricing
+
+- [Rate Card](https://www.occam-seo.com/pricing.html): Current prices for all services. As of November 2026:
+  - SEO Audit: $300 flat fee
+  - Website Cleanup (fixes to an existing site): $80/hour, estimated after an audit
+  - Website Design: $1,000 plus $60/hour for additional work; includes technical SEO, local SEO, content strategy, and Google Business Profile setup
+  - The Razor Package (ongoing SEO and website updates): $80/hour, hours set to the client's monthly budget, 3-month minimum
+  - Corporate Rate (for companies that refer clients): $65/hour
+  - Consulting (ongoing SEO and marketing advice): $300/month
 
 ## About
 
-- [About Occam SEO](https://occam-seo.com/about.html): Founder John W. Youngblood and the agency's approach.
-- [Get A Quote](https://occam-seo.com/quote.html): How to request a quote or book a consultation.
+- [About Occam SEO](https://www.occam-seo.com/about.html): Founder John W. Youngblood and the agency's philosophy.
+- [Get a Quote](https://www.occam-seo.com/quote.html): Request a free quote; Occam SEO responds within one business day.
 
-## Optional
+## Blog
 
-- [Blog](https://occam-seo.com/blog.html): SEO guides and articles.
+- [The Occam Journal](https://www.occam-seo.com/blog.html): All articles.
+- [Local SEO in Raleigh: How to Rank Higher](https://www.occam-seo.com/blog-local-seo-raleigh.html): How Raleigh-area businesses can improve local visibility.
+- [Local SEO and Your Google Business Profile](https://www.occam-seo.com/blog-local-seo-strategies.html): Google Business Profile, citations, and reviews.
+- [Why 90% of SEO Audits Are Overcomplicated](https://www.occam-seo.com/blog-seo-audits.html): Finding the few fixes that move rankings.
+- [Stop Writing More Content. Start Writing Better Content.](https://www.occam-seo.com/blog-better-content.html): Why one exceptional page beats ten mediocre ones.
+- [The Case Against Monthly SEO Retainers](https://www.occam-seo.com/blog-seo-retainers.html): Project-based SEO versus retainers.
+- [Why We Named the Company After a Medieval Monk](https://www.occam-seo.com/blog-medieval-monk.html): The Occam's Razor philosophy behind the agency.
